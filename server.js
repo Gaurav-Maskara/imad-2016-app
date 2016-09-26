@@ -37,6 +37,11 @@ app.get('/article-five', function (req , res){
 	res.send('Article five will be served here');
 	
 } );
+
+app.get('/article-six', function (req , res){
+	res.send('Article six will be served here');
+	
+} );
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
