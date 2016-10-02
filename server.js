@@ -141,6 +141,11 @@ app.get('/article-six', function (req , res){
 	// again this is written on git hub to see how thing swork on git hub
 	
 } );
+
+app.get('/article-nine', function (req , res){
+	res.send('Article nine will be served here');
+	
+} );
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
