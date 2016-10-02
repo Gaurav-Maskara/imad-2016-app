@@ -137,7 +137,7 @@ app.get('/article-five', function (req , res){
 app.get('/article-six', function (req , res){
 	res.send('Article six will be served here');
 	
-	// this is written on git hub
+	// this is written on git hub to check how conflicts occur on github
 	
 } );
 app.get('/ui/madi.png', function (req, res) {
