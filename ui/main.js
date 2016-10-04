@@ -7,4 +7,4 @@ var img =document.getElementById('shiva');
 img.onclick=function() {
     
     img.style.marginLeft="100px";
-}
+};
