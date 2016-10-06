@@ -1,20 +1,14 @@
-console.log('Loaded!');
-
-var element =document.getElementById("mainId");
-element.innerHTML="This is the new Value of the Element";
-
-var img =document.getElementById('shiva');
-var marginLeft=0;
-
-function moveRight(){
-    marginLeft=marginLeft+1;
-    img.style.marginLeft=marginLeft+"px";
-    
-}
-
-img.onclick=function() {
-    
-    var interval=setInterval(moveRight ,50);
-    
-  
-};
+ //counter code
+ var button =document.getElementById("counter");
+ var counter=0;
+ button.onclick=function(){
+     
+     //make arequest to the counte endpoint 
+     //capture the response and store it in avariable
+     //render the varible at the correct span
+     
+     counter=counter+1;
+     var span =document.getElementById("count");
+     span.innerHTML=counter.toString();
+     
+ };
