@@ -68,7 +68,7 @@ var htmlTemplate=`<html>
     
     <meta name="viewport" content="width=device-width ,initial-scale=1">
     <link href="/ui/style.css" rel="stylesheet" />
-    <script type="text/javascript" src="/ui/main.js"></script>
+    <script type="text/javascript" src="/ui/article.js"></script>
    
 </head>
     
@@ -167,6 +167,11 @@ app.get('/:articleName' ,function(req, res){
 
 app.get('/ui/main.js', function (req , res){
 	res.sendFile(path.join(__dirname, 'ui', 'main.js'));
+	
+} );
+
+app.get('/ui/article.js', function (req , res){
+	res.sendFile(path.join(__dirname, 'ui', 'article.js'));
 	
 } );
 
