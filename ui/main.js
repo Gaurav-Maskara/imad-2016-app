@@ -29,8 +29,7 @@
  var submit =document.getElementById("submit_btn");
  submit.onclick=function(){
       //Create a request object 
-       var nameInput=document.getElementById("name");
-       var name=nameInput.value;
+       
      var request=new XMLHttpRequest();
      
      //capture the response and store it in a variable
@@ -51,6 +50,8 @@
           }
          
      };
+       var nameInput=document.getElementById("name");
+       var name=nameInput.value;
      //make a request 
      request.open('GET','http://gaurav-maskara.imad.hasura-app.io/submit-name?name='+name   ,true);
      request.send(null);
