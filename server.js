@@ -98,9 +98,10 @@ var htmlTemplate=`<html>
       
       
       
-        <div id="footer" class="footer">
+        <div class="footer">
         <input id="textBox" type="textbox" placeholder="Enter your comments here "> 
         <input id="submitComment" type="submit" onclick="myfunction()">
+        <ul id="unorderedlist"></ul>
         
         <span id="comments"></span>
        
