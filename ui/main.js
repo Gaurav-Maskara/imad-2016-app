@@ -60,8 +60,6 @@
      
  };
  
- // to add comments to the three article pages
- 
  
 
  
