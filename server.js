@@ -21,8 +21,8 @@ var articles={
        </p>
        
        <p>This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first artic
-       </p>`
-
+       </p>`,
+       
     
 },
  'article-two':{
@@ -96,6 +96,13 @@ var htmlTemplate=`<html>
         </div>
       
        </div>
+        
+        <div class="footer">
+        <input id="textBox" type="textbox" placeholder="Enter your comments here "> 
+        <input id="submit" type="Submit">
+        
+        
+        </div>
         
     </body>
     
