@@ -12,7 +12,7 @@
             if(request.status==200){
                 var comment =request.responseText;
                 comment=JSON.parse(comment);
-                document.getElementById("footer").innerHTML=comment;
+                document.getElementById("unorderedlist").innerHTML=comment;
                 
              }
           }
@@ -24,6 +24,6 @@
       request.open('GET','http://gaurav-maskara.imad.hasura-app.io/submit-comment?comment='+commentValue   ,true);
      request.send(null);
      
- };
+ }
  
  
