@@ -11,7 +11,6 @@
             // Take some action  
             if(request.status==200){
                 var comment =request.responseText;
-                comment=JSON.parse(comment);
                 document.getElementById("unorderedlist").innerHTML=comment;
                 
              }
