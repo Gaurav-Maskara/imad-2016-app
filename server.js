@@ -78,7 +78,7 @@ var htmlTemplate=`<html>
         
            <div>
             <a href="/">Home</a>
-          </div>
+           </div>
         
            <hr/>
         
@@ -95,14 +95,19 @@ var htmlTemplate=`<html>
         ${content}
         </div>
       
-       </div>
-        
+      
+      
         <div class="footer">
         <input id="textBox" type="textbox" placeholder="Enter your comments here "> 
         <input id="submit" type="Submit">
+       
+       
+       </div>
+        
+       
         
         
-        </div>
+       
         
     </body>
     
