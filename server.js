@@ -146,6 +146,15 @@ app.get("/submit-name",function(req ,res){ //URL :/submit-name?name=xxxxx
     
 });
 
+
+
+app.get("/submit-comment",function(req ,res){ 
+    //get the name from the request object 
+    var comment=req.query.comment;
+    res.send(JSON.stringify(comment));
+    
+});
+
 app.get('/:articleName' ,function(req, res){
     // articleName==article-one
     
