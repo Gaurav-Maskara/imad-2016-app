@@ -12,7 +12,7 @@
             if(request.status==200){
                 var comment =request.responseText;
                 comment=JSON.parse(comment);
-                document.getElementById("comments").innerHTML=comment;
+                document.getElementById("footer").innerHTML=comment;
                 
              }
           }
