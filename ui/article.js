@@ -21,7 +21,7 @@
      
      var comment=document.getElementById("textBox");
      var commentValue=comment.value;
-     request.open("GET","http://gaurav-maskara.imad.hasura-app.io/submit-comment?comment="+commentValue,true);
+      request.open('GET','http://gaurav-maskara.imad.hasura-app.io/submit-name?comment='+commentValue   ,true);
      request.send(null);
      
  };
