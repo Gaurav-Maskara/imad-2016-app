@@ -68,6 +68,7 @@ var htmlTemplate=`<html>
     
     <meta name="viewport" content="width=device-width ,initial-scale=1">
     <link href="/ui/style.css" rel="stylesheet" />
+    <script type="text/javascript" src="/ui/main.js"></script>
    
 </head>
     
@@ -101,7 +102,7 @@ var htmlTemplate=`<html>
         <input id="textBox" type="textbox" placeholder="Enter your comments here "> 
         <input id="submit" type="Submit">
         
-        <span id="cooments"></span>
+        <span id="comments"></span>
        
        
        </div>
@@ -152,33 +153,7 @@ app.get('/:articleName' ,function(req, res){
 	res.send(createTemplate(articles[articleName]));
 });
 
-app.get('/article-four', function (req , res){
-	res.send('Article four will be served here');
-	
-} );
 
-app.get('/article-five', function (req , res){
-	res.send('Article five will be served here');
-	
-} );
-
-app.get('/article-six', function (req , res){
-	res.send('Article six will be served here');
-	
-	// this is written on git hub to check how conflicts occur on github
-	// again this is written on git hub to see how thing swork on git hub
-	
-} );
-
-app.get('/article-nine', function (req , res){
-	res.send('Article nine will be served here');
-	
-} );
-
-app.get('/article-ten', function (req , res){
-	res.send('Article nine will be served here');
-	
-} );
 
 app.get('/ui/main.js', function (req , res){
 	res.sendFile(path.join(__dirname, 'ui', 'main.js'));
