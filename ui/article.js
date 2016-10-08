@@ -11,7 +11,7 @@
             // Take some action  
             if(request.status==200){
                 var comment =request.responseText;
-                document.getElementById("unorderedlist").innerHTML=comment;
+                document.getElementById("footer").innerHTML=comment;
                 
              }
           }
