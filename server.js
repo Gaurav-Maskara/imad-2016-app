@@ -99,7 +99,7 @@ var htmlTemplate=`<html>
       
       
         <div id="footer" class="footer">
-        <input id="textBox" type="textbox" placeholder="Enter your comments here " style="width: 200px;height:50px"> 
+        <input id="textBox" type="textbox" placeholder="Enter your comments here "> 
         <input id="submitComment" type="submit" onclick="myfunction()">
         
         <span id="comments"></span>
