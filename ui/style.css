@@ -1,15 +1,15 @@
 body {
     font-family: sans-serif;
     margin-top: 60px;
+    background-image: url("/ui/background.jpg");
 }
+
+
 
 .center {
     text-align: center;
 }
 
-/*.left {
-    text-align: left;
-}*/
 
 .text-big {
     font-size: 300%;
