@@ -7,6 +7,10 @@ body {
     text-align: center;
 }
 
+.leftImage {
+    text-align: left;
+}
+
 .text-big {
     font-size: 300%;
 }
@@ -15,7 +19,7 @@ body {
     font-weight: bold;
 }
 
-.img{
+.img-medium {
     height: 100px;
     width:100px;
 }
