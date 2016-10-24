@@ -7,9 +7,9 @@ body {
     text-align: center;
 }
 
-.left {
+/*.left {
     text-align: left;
-}
+}*/
 
 .text-big {
     font-size: 300%;
@@ -20,7 +20,7 @@ body {
 }
 
 .img-medium {
-   
+    float:left;
     height: 150px;
 }
 
