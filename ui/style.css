@@ -7,9 +7,10 @@ body {
     text-align: center;
 }
 
-.leftImage {
+.left {
     text-align: left;
     width: 150px;
+    height:150px;
 }
 
 .text-big {
