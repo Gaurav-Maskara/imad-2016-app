@@ -192,7 +192,7 @@ app.get('/css/bootstrap.css', function (req, res) {
 });
 
 app.get('/css/fontello.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/css/', 'fontello.css'));
+  res.sendFile(path.join(__dirname, 'ui/font/css/', 'fontello.css'));
 });
 
 app.get('/js/jquery-1.10.1.min.js', function (req, res) {
