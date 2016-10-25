@@ -203,6 +203,10 @@ app.get('/js/bootstrap.min.js', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/js/', 'bootstrap.min.js'));
 });
 
+app.get('/img/user.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/img/', 'user.jpg'));
+});
+
 
 
 var port = 8080; // Use 8080 for local development because you might already have apache running on 80
