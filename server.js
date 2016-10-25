@@ -191,7 +191,7 @@ app.get('/css/bootstrap.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/css/', 'bootstrap.css'));
 });
 
-app.get('/css/fontello.css', function (req, res) {
+app.get('/font/css/fontello.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/font/css/', 'fontello.css'));
 });
 
