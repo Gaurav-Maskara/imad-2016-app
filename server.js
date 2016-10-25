@@ -207,8 +207,8 @@ app.get('/img/user.jpg', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/img/', 'user.jpg'));
 });
 
-app.get('/img/mini.png', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/img/', 'mini.png'));
+app.get('/img/gaurav.png', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/img/', 'gaurav.png'));
 });
 
 app.get('/img/fb.png', function (req, res) {
