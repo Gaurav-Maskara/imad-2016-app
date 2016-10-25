@@ -183,9 +183,24 @@ app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
 });
 
+app.get('/css/style.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/css/', 'style.css'));
+});
 
 app.get('/css/bootstrap.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/css/', 'bootstrap.css'));
+});
+
+app.get('/css/fontello.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/css/', 'fontello.css'));
+});
+
+app.get('/js/jquery-1.10.1.min.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/js/', 'jquery-1.10.1.min.js'));
+});
+
+app.get('/js/bootstrap.min.js', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/js/', 'bootstrap.min.js'));
 });
 
 
