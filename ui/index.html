@@ -1,56 +1,85 @@
-<!doctype html>
-<html>
-    <head>
-        <link href="/ui/style.css" rel="stylesheet" />
-        <title>Home Page</title>
-        <link rel="shortcut icon" href="http://i-cdn.phonearena.com/images/article/58161-image/25-cool-new-icon-packs-and-themes-to-freshen-up-your-Android-style-2014-edition.jpg" type="image/x-icon" />
-        
-         
-    </head>
-    <body>
-        <div class="container">
-            <div class="left">
-                <h2><u>About Me :</u></h2>
-               <!-- <img id='gaurav' alt="Gaurav Maskara" src="https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAhiAAAAJDA1MWU0MWQyLTc2MzItNDYyZC1hZmJlLWY3ZDc1MDhiYTFiMA.jpg" class="img-medium"/>-->
-               <ul style="margin-top: 50px;">
-                   <li>Hi. My name is Gaurav Maskara</li>
-                   <li>I did my B.Tech in Computer Science & Engineering from IET Lucknow</li>
-                   <li> I was an active member of the cultural society of the college</li>
-                   <li>My hobbies are reading novels and travelling</li>
-               </ul>
-            </div>
-            
-            <br/><br/><br/><br/>
-            
-            <hr/>
-            <div class="middle">
-              <h3><u>Professional :</u></h3>
-              <ul >
-                   <li>Currently I am working at TCS as Assistant System Engineer</li>
-                   <li>I have 11 months of experience in JAVA/JEE </li>
-                   <li>Currently my project is on SOAP Web Services</li>
-                   <li>I also worked for 4 months on Spring/JEE framework based Web Application</li>
-               </ul>
-            </div>
-           
-            <hr/>
-            <div class="footer">
-                This button <button id="counter">Click me!</button> has been clicked <span id="count">0</span> times.
-                <hr/>
-                <input type="text" id="name" placeholder="name"></input>
-                <input type="submit" value="Submit" id="submit_btn"></input>
-                <ul id="namelist">
-                </ul>
-                
-                <div class=counter align=right>
-                 <p><b>Visitor No:</b></p>
-                <div align=right><img src='http://www.counter12.com/img-5CBc7w3x-77.gif' border='0' alt='free counter'><script type='text/javascript' src='http://www.counter12.com/ad.js?id=5CBc7w3x'></script>
-                </div>
-                </div>
-                
-            </div>
-        </div>
-       <script type="text/javascript" src="/ui/main.js">
-        </script>
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home Page</title>
+<link rel="shortcut icon" href="http://i-cdn.phonearena.com/images/article/58161-image/25-cool-new-icon-packs-and-themes-to-freshen-up-your-Android-style-2014-edition.jpg" type="image/x-icon" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="font/css/fontello.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+</head>
+<body>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="index.html"><img src="img/user.jpg" alt=""></a>
+      <ul class="nav nav-collapse pull-right">
+        <li><a href="index.html" class="active"><i class="icon-user"></i> Profile</a></li>
+        <li><a href="skills.html"><i class="icon-trophy"></i> Skills</a></li>
+        <li><a href="work.html"><i class="icon-picture"></i> Work</a></li>
+        <li><a href="resume.html"><i class="icon-doc-text"></i> Resume</a></li>
+      </ul>
+       <ul class="nav nav-collapse pull-right">
+        <li><a href="index.html" class="active"><i class="icon-doc-text"></i> Articles</a></li>
+      </ul>
+      <div class="nav-collapse collapse"></div>
+    </div>
+  </div>
+</div>
+<div class="container profile">
+  <div class="span3"> <img src="img/mini.png" alt="Gaurav Maskara"> </div>
+  <div class="span5">
+    <h1>Gaurav Maskara</h1>
+    <h3>Java/JEE & Web Designer</h3>
+    <p> Hello. I am Gaurav Maskara , a Computer Science Engineer from Delhi </p>
+    <ul>
+      <li>I did my B.Tech in Computer Science & Engineering from IET Lucknow</li>
+      <li>Currently I am working at TCS as Assistant System Engineer</li>
+      <li>I have 11 months of experience in JAVA/JEE</li>
+      <li>Currently I am working on SOAP Web Services</li>
+      <li>I also worked for 4 months on Spring/JEE framework based Web Application</li>
+    </ul>
+     
+    <a href="#myModal" role="button" data-toggle="modal" class="hire-me"><i class="icon-paper-plane"></i> Contact </a> </div>
+</div>
+<div class="row social">
+  <ul class="social-icons">
+    <li><a href="#"><img src="img/fb.png" alt=""></a></li>
+    <li><a href="https://www.linkedin.com/in/gaurav-maskara-8682a0a6?trk=hp-identity-name"><img src="img/linkedin_circle_color-512.png" alt=""></a></li>
+    <li><a href="#"><img src="img/tw.png" alt=""></a></li>
+    <li><a href="#"><img src="img/go.png" alt=""></a></li>
+    <!-- <li><a href="#"><img src="img/pin.png" alt=""></a></li>
+    <li><a href="#"><img src="img/st.png" alt=""></a></li>
+    <li><a href="#"><img src="img/dr.png" alt=""></a></li> -->
+  </ul>
+</div>
+<div class="footer" href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
+  <div class="container">
+<p class="pull-left"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravmaskara007@gmail.com">gauravmaskara007@gmail.com</a></p>
+<p class="pull-right"><a href="#myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i> CONTACT</a></p>
+  </div>
+</div>
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <h3 id="myModalLabel"><i class="icon-mail"></i> Contact Me</h3>
+  </div>
+  <div class="modal-body">
+    <form action="#">
+      <input type="text" placeholder="Your Name">
+      <input type="text" placeholder="Your Email">
+      <input type="text" placeholder="Website (Optional)">
+      <textarea rows="3" style="width:80%"></textarea>
+      <br>
+      <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
+    </form>
+  </div>
+</div>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+$('#myModal').modal('hidden')
+</script>
+</body>
 </html>
