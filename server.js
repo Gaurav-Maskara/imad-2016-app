@@ -69,6 +69,7 @@ var title=data.title;
 var date =data.date;
 var content=data.content;
 var heading=data.heading; 
+var video=data.video;
 
 var htmlTemplate=`
 <html lang="en">
@@ -112,9 +113,9 @@ var htmlTemplate=`
    ${content}
   </div>
   
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/Ez4mXaeSKuk" frameborder="0" allowfullscreen></iframe>
-
-  
+  <div>
+  ${video}
+  </div>
   
 </div>
 <div class="row social">
