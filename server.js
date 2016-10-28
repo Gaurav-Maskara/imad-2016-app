@@ -117,6 +117,15 @@ var htmlTemplate=`
    ${content}
   </div>
   
+  
+  <div class="modal-body">
+      <input type="text" placeholder="Yopur Name">
+      <input type="text" placeholder="Your Email">
+      <input type="text" placeholder="Website (Optional)">
+      <textarea rows="3" placeholder="Comments" style="width:80%"></textarea>
+      <br>
+      <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
+  </div>
  
   
 </div>
