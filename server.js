@@ -110,12 +110,14 @@ var htmlTemplate=`
   </div>
   
   <div>
-   ${content}
+  ${video}
   </div>
   
   <div>
-  ${video}
+   ${content}
   </div>
+  
+ 
   
 </div>
 <div class="row social">
