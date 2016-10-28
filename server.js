@@ -216,14 +216,14 @@ app.get('/:articleName' ,function(req, res){
         else{
             if(result.rows.length===0){
                
-               var articleNotFound={
+               var articleNotFound= {
                    title:'Not Found',
                    heading:'Requested Article Not found please try another article',
                    date:'',
-                   content:'Article not found'
+                   content:`<p>not found</p>`
                    
                };
-               res.status(404).send('article not found');
+               res.status(404).send(createTemplate(articleNotFound));
             }
             else{
                 var articleData=result.rows[0];
