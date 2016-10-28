@@ -115,13 +115,7 @@ var htmlTemplate=`<html>
         
         <span id="comments"></span>
        
-       
        </div>
-        
-       
-        
-        
-       
         
     </body>
     
