@@ -119,9 +119,9 @@ var htmlTemplate=`
   </div>
   
   <h2><u>Comment Section</u></h2>
-  <div id="comment">
+  <ul id="commentList">
   
-  </div>
+  </ul>
   
   
   <div class="modal-body" style="text-align: left;">
