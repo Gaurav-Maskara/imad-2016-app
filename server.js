@@ -117,7 +117,7 @@ var htmlTemplate=`
    ${content}
   </div>
   
-  <h3><u>Comment Section</u></h3>
+  <h2><u>Comment Section</u></h2>
   <div>
   <p>this is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test comment</p>
   <p>this is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test comment</p>
