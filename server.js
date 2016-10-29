@@ -80,6 +80,7 @@ var htmlTemplate=`
 <link rel="shortcut icon" href="http://i-cdn.phonearena.com/images/article/58161-image/25-cool-new-icon-packs-and-themes-to-freshen-up-your-Android-style-2014-edition.jpg" type="image/x-icon" />
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="/ui/article.js"></script>
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link href="font/css/fontello.css" rel="stylesheet">
