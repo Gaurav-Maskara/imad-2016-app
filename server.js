@@ -215,13 +215,21 @@ app.get("/submit-name",function(req ,res){ //URL :/submit-name?name=xxxxx
     
 });
 
-app.get("/submit-comment",function(req ,res){ 
+/*app.get("/submit-comment",function(req ,res){ 
     //get the name from the request object 
     var comment=req.query.comment;
     comment =comment + " this part is returned from the server ";
    // res.send(JSON.stringify(comment));
    res.send(comment);
     
+});*/
+
+var comments=[];
+app.get("/submit-name",function(req ,res){ //URL :/submit-name?name=xxxxx
+    //get the name from the request object 
+    var comment=req.query.name;
+    comments.push(comment);
+    res.send(JSON.stringify(comments));
 });
 
 app.get('/:articleName' ,function(req, res){
