@@ -149,14 +149,9 @@ var htmlTemplate=`
     <h3 id="myModalLabel"><i class="icon-mail"></i> Contact Me</h3>
   </div>
   <div class="modal-body">
-    <form action="#">
-      <input type="text" placeholder="Yopur Name">
-      <input type="text" placeholder="Your Email">
-      <input type="text" placeholder="Website (Optional)">
       <textarea rows="3" style="width:80%"></textarea>
       <br>
       <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
-    </form>
   </div>
 </div>
 <script src="js/jquery-1.10.1.min.js"></script>
