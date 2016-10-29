@@ -117,6 +117,11 @@ var htmlTemplate=`
    ${content}
   </div>
   
+  <div>
+  <h3>Comment Section</h3>
+  
+  </div>
+  
   
   <div class="modal-body" style="text-align: left;">
       <textarea rows="3" placeholder="Enter your comments" style="width:80%"></textarea>
