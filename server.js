@@ -119,18 +119,15 @@ var htmlTemplate=`
   </div>
   
   <h2><u>Comment Section</u></h2>
-  <div>
-  <p>this is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test comment</p>
-  <p>this is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test commentthis is a test comment</p>
-  <p>this is a test comment this is a test comment</p>
-  <p>this is a test comment</p>
+  <div id="comment">
+  
   </div>
   
   
   <div class="modal-body" style="text-align: left;">
-      <textarea rows="3" placeholder="Enter your comments" style="width:80%"></textarea>
+      <textarea id="textBox" rows="3" placeholder="Enter your comments" style="width:80%"></textarea>
       <br>
-      <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
+      <button id="submitComment" type="submit" class="btn btn-large" onclick="myfunction()"><i class="icon-paper-plane"></i> SUBMIT</button>
   </div>
  
   
