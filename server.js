@@ -225,9 +225,9 @@ app.get("/submit-name",function(req ,res){ //URL :/submit-name?name=xxxxx
 });*/
 
 var comments=[];
-app.get("/submit-name",function(req ,res){ //URL :/submit-name?name=xxxxx
-    //get the name from the request object 
-    var comment=req.query.name;
+app.get("/submit-comment",function(req ,res){ 
+    //get the comment from the request object 
+    var comment=req.query.comment;
     comments.push(comment);
     res.send(JSON.stringify(comments));
 });
