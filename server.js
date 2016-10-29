@@ -120,7 +120,6 @@ var htmlTemplate=`
   
   <h2><u>Comment Section</u></h2>
   <ul id="commentList">
-  
   </ul>
   
   
