@@ -29,6 +29,7 @@
  
  var commentSubmitButton=document.getElementById("submitComment");
  function myfunction(){
+     alert("check");
      
       var request=new XMLHttpRequest();
      //capture the response and store it in a variable
