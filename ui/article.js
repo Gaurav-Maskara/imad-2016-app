@@ -11,7 +11,7 @@
             // Take some action  
             if(request.status==200){
                 var comment =request.responseText;
-                document.getElementById("footer").innerHTML=comment;
+                document.getElementById("comment").innerHTML=comment;
                 
              }
           }
@@ -20,7 +20,7 @@
      
      var comment=document.getElementById("textBox");
      var commentValue=comment.value;
-      request.open('GET','http://gaurav-maskara.imad.hasura-app.io/submit-comment?comment='+commentValue   ,true);
+     request.open('GET','http://gaurav-maskara.imad.hasura-app.io/submit-comment?comment='+commentValue   ,true);
      request.send(null);
      
  }
