@@ -118,7 +118,7 @@ var htmlTemplate=`
   </div>
   
   
-  <div class="modal-body">
+  <div class="modal-body" style="text-align: left;">
       <textarea rows="3" placeholder="Enter your comments" style="width:80%"></textarea>
       <br>
       <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
