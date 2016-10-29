@@ -44,7 +44,7 @@
                   list += '<li>' + comments[i] + '</li>';
               }
               var ul = document.getElementById('commentList');
-              ul.innerHTML = "hello"; 
+              ul.innerHTML = "<li>this is test</li>"; 
                 
              }
           }
