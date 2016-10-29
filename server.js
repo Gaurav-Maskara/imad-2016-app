@@ -119,10 +119,7 @@ var htmlTemplate=`
   
   
   <div class="modal-body">
-      <input type="text" placeholder="Yopur Name">
-      <input type="text" placeholder="Your Email">
-      <input type="text" placeholder="Website (Optional)">
-      <textarea rows="3" placeholder="Comments" style="width:80%"></textarea>
+      <textarea rows="3" placeholder="Enter your comments" style="width:80%"></textarea>
       <br>
       <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
   </div>
@@ -148,10 +145,15 @@ var htmlTemplate=`
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
     <h3 id="myModalLabel"><i class="icon-mail"></i> Contact Me</h3>
   </div>
-  <div class="modal-body">
+   <div class="modal-body">
+    <form action="#">
+      <input type="text" placeholder="Your Name">
+      <input type="text" placeholder="Your Email">
+      <input type="text" placeholder="Website (Optional)">
       <textarea rows="3" style="width:80%"></textarea>
       <br>
       <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
+    </form>
   </div>
 </div>
 <script src="js/jquery-1.10.1.min.js"></script>
