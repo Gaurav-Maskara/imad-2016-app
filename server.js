@@ -249,7 +249,8 @@ app.get('/:articleName' ,function(req, res){
                    content:`<p>not found</p>`
                    
                };
-               res.status(404).send('Article Not Found');
+              // res.status(404).send('Article Not Found');
+               res.send(createTemplate(articleNotFound));
             }
             else{
                 var articleData=result.rows[0];
