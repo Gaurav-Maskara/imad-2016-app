@@ -266,8 +266,6 @@ app.get("/submit-comment",function(req ,res){
         }
     });
     
-    comments.push(comment);
-    res.send(JSON.stringify(comments));
 });
 
 
