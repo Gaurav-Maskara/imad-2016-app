@@ -210,7 +210,6 @@ app.get("/submit-name",function(req ,res){ //URL :/submit-name?name=xxxxx
     var name=req.query.name;
     names.push(name);
     res.send(JSON.stringify(names));
-  
     
 });
 
@@ -223,13 +222,35 @@ app.get("/submit-name",function(req ,res){ //URL :/submit-name?name=xxxxx
     
 });*/
 
-var comments=[];
+/*var comments=[];
 app.get("/submit-comment",function(req ,res){ 
     //get the comment from the request object 
     var comment=req.query.comment;
     comments.push(comment);
     res.send(JSON.stringify(comments));
+});*/
+
+var comments=[];
+app.get("/submit-comment",function(req ,res){ 
+    //get the comment from the request object 
+    var comment=req.query.comment;
+    
+    pool.query("insert into comment (comment) values ('Test comment')",function(err,result){
+       
+       if (err)
+			res.status(500).send(err.toString());
+		else {
+			res.status(200).send('Successfully created');
+		}  
+        
+    });
+    comments.push(comment);
+    res.send(JSON.stringify(comments));
 });
+
+
+
+
 
 app.get('/:articleName' ,function(req, res){
     // articleName==article-one
@@ -249,8 +270,8 @@ app.get('/:articleName' ,function(req, res){
                    content:`<p>not found</p>`
                    
                };
-              // res.status(404).send('Article Not Found');
-               res.send(createTemplate(articleNotFound));
+               res.status(404).send('Article Not Found');
+             
             }
             else{
                 var articleData=result.rows[0];
@@ -258,7 +279,6 @@ app.get('/:articleName' ,function(req, res){
             }
         }
     });
-    
 
 });
 
@@ -322,7 +342,6 @@ app.get('/img/tw.png', function (req, res) {
 app.get('/img/go.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/img/', 'go.png'));
 });
-
 
 app.get('/font/font/fontello.ttf', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/font/font/', 'fontello.ttf'));
