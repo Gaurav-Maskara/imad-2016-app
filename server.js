@@ -19,7 +19,7 @@ app.use(morgan('combined'));
 
 var articles={
 
-'article-one' :{
+'article-one':{
     title:'Article One| Gaurav Maskara',
     heading:'Article One',
     date:'26 September',
