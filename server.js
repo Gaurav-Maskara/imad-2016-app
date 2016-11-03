@@ -235,9 +235,8 @@ app.get("/submit-comment",function(req ,res){
     //get the comment from the request object 
     var comment=req.query.comment;
     var comments;
-    
+   
     pool.query("insert into comment (comment) values ($1)",[comment],function(err,result){
-       
        if (err)
 			res.status(500).send(err.toString());
     });
@@ -248,16 +247,13 @@ app.get("/submit-comment",function(req ,res){
         }
         else{
             if(result.rows.length===0){
-              
                res.status(404).send('Unable to fetch comments from the database');
-             
             }
             else{
                 for(var i=0;i<result.rows.length;i++){
-                     comments+="<li>"+result.rows[i].comment+"</li>";
-            	     res.send(comments);
+                     comments=comments+"<li>"+result.rows[i].comment+"</li>";
                 }
-               
+                  res.send(comments);
             }
         }
     });
