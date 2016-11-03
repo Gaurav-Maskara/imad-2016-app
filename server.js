@@ -230,25 +230,45 @@ app.get("/submit-comment",function(req ,res){
     res.send(JSON.stringify(comments));
 });*/
 
-var comments=[];
+
 app.get("/submit-comment",function(req ,res){ 
     //get the comment from the request object 
     var comment=req.query.comment;
+    var comments;
     
     pool.query("insert into comment (comment) values ('Test comment')",function(err,result){
        
        if (err)
 			res.status(500).send(err.toString());
 		else {
-			res.status(200).send('Successfully created');
+			res.status(200).send('Unable to add comment into the database');
 		}  
         
     });
+    
+    pool.query("SELECT * FROM comment ",function(err,result){
+        if(err){
+           res.status(500).send(err.toString()); 
+        }
+        else{
+            if(result.rows.length===0){
+              
+               res.status(404).send('Unable to fetch comments from the database');
+             
+            }
+            else{
+                for(var i=0;i<result.rows.length;i++){
+                     comments+="<li>"+result.rows[i].comment+"</li>";
+            	     res.send(comments);
+                }
+               
+            }
+        }
+    });
+    
     comments.push(comment);
     res.send(JSON.stringify(comments));
 });
-
-
 
 
 
@@ -286,14 +306,11 @@ app.get('/:articleName' ,function(req, res){
 
 app.get('/ui/main.js', function (req , res){
 	res.sendFile(path.join(__dirname, 'ui', 'main.js'));
-	
 } );
 
 app.get('/ui/article.js', function (req , res){
 	res.sendFile(path.join(__dirname, 'ui', 'article.js'));
-	
 } );
-
 
 app.get('/ui/madi.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'madi.png'));
