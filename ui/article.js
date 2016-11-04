@@ -25,8 +25,8 @@
      
  };*/
  
- $(document).on("pageload",function(){
-  alert("pageload event fired!");
+$(document).on("pagecontainerload",function(){
+  alert("Loaded");
 });
  
  var commentSubmitButton=document.getElementById("submitComment");
