@@ -61,6 +61,7 @@
  };
  
   function feedback(){
+      alert("This is a test case");
      
         var request=new XMLHttpRequest();
         request.onreadystatechange=function(){
