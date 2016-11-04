@@ -59,17 +59,17 @@
 </div>
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">ï¿½</button>
     <h3 id="myModalLabel"><i class="icon-mail"></i> Submit Your Feedback</h3>
   </div>
   <div class="modal-body">
     <form action="#">
-      <input type="text" placeholder="Your Name">
-      <input type="text" placeholder="Your Email">
-      <input type="text" placeholder="Website (Optional)">
-      <textarea rows="3" style="width:80%"></textarea>
+      <input type="text" placeholder="Your Name" id="name">
+      <input type="text" placeholder="Your Email" id="email">
+      <input type="text" placeholder="Website (Optional)" id="website">
+      <textarea rows="3" style="width:80%" id="text"></textarea>
       <br>
-      <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
+      <button type="submit" class="btn btn-large" onclick="myfunction()"><i class="icon-paper-plane"></i> SUBMIT</button>
     </form>
   </div>
 </div>

@@ -241,9 +241,7 @@ app.get("/submit-comment",function(req ,res){
 			res.status(500).send(err.toString());
 
 	else{
-		    
 	    pool.query("SELECT * FROM comment ",function(err,result){
-       
         if(err){
            res.status(500).send(err.toString()); 
         }
@@ -258,8 +256,7 @@ app.get("/submit-comment",function(req ,res){
                   res.send(comments);
             }
         }
-    });
-	
+     });
 	   }	
     });
   
@@ -286,9 +283,24 @@ app.get("/comments",function(req ,res){
     });
 });
   
+app.get("/feedback",function(req ,res){ 
 
+	var name=req.query.name;
+	var email=req.query.email;
+	var website=req.query.website;
+	var text=req.query.text;
+    
+   
+    pool.query("insert into feedback (name,email,website,text) values ($1,$2,$3,$4)",[name,email,website,text],function(err,result){
+       if (err)
+			res.status(500).send(err.toString());
 
-
+	else{
+	  
+	   }	
+    });
+  
+});
 
 app.get('/:articleName' ,function(req, res){
     // articleName==article-one

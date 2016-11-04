@@ -61,6 +61,26 @@
  };
  
  
+   function myfunction(){
+        var request=new XMLHttpRequest();
+        request.onreadystatechange=function(){
+         if(request.readyState==XMLHttpRequest.DONE){
+            if(request.status==200){
+             
+             }
+          }
+     };
+     
+     var name=document.getElementById("name").value;
+     var email=document.getElementById("email").value;
+     var website=document.getElementById("website").value;
+     var text=document.getElementById("text").value;
+    
+     request.open('GET','http://gaurav-maskara.imad.hasura-app.io/feedback?name='+name+'&email='+email+'&website='+website+'&text='+text   ,true);
+     request.send(null);
+ };
+ 
+ 
 
  
  
