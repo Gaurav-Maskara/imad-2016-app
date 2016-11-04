@@ -239,9 +239,11 @@ app.get("/submit-comment",function(req ,res){
     pool.query("insert into comment (comment) values ($1)",[comment],function(err,result){
        if (err)
 			res.status(500).send(err.toString());
-    });
-    
-    pool.query("SELECT * FROM comment ",function(err,result){
+
+	else{
+		    
+	    pool.query("SELECT * FROM comment ",function(err,result){
+       
         if(err){
            res.status(500).send(err.toString()); 
         }
@@ -257,7 +259,10 @@ app.get("/submit-comment",function(req ,res){
             }
         }
     });
-    
+	
+	   }	
+    });
+  
 });
 
 
