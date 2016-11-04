@@ -66,7 +66,7 @@
         request.onreadystatechange=function(){
          if(request.readyState==XMLHttpRequest.DONE){
             if(request.status==200){
-              self.close();
+              window.close();
               return true;
              }
              
