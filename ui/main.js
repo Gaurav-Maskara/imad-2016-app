@@ -63,8 +63,6 @@
   function feedback(){
       
       document.getElementById("myModal").setAttribute("class", "modal hide fade");
-       document.getElementById("myModal").setAttribute("aria-hidden", "true");
-        document.getElementById("myModal").setAttribute("style", "display: none;");
         var request=new XMLHttpRequest();
         request.onreadystatechange=function(){
          if(request.readyState==XMLHttpRequest.DONE){
