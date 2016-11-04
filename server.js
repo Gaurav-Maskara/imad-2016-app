@@ -332,7 +332,9 @@ app.get('/:articleName' ,function(req, res){
 
 });
 
-
+app.get('/resume', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'pdf-sample.pdf'));
+});
 
 app.get('/ui/main.js', function (req , res){
 	res.sendFile(path.join(__dirname, 'ui', 'main.js'));
