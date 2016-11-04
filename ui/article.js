@@ -57,4 +57,6 @@
      
  }
  
- 
+function myAlert(){
+    alert("Successfully Loaded");
+}
