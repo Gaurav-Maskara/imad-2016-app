@@ -58,5 +58,5 @@
  }
  
 window.onload = function() {
-  yourFunction(param1, param2);
+ alert("Successfully Loaded");
 };
