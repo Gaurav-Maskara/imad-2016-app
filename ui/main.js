@@ -1,5 +1,5 @@
  //counter code
- var button =document.getElementById('counter');
+/* var button =document.getElementById('counter');
 
  button.onclick=function(){
      
@@ -22,7 +22,7 @@
      request.open('GET','http://gaurav-maskara.imad.hasura-app.io/counter',true);
      request.send(null);
      
- };
+ };*/
  
  //Submit name
 
