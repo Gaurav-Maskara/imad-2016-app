@@ -58,5 +58,19 @@
  }
  
 window.onload = function() {
-  alert("Successfully Loaded");
+  
+     var request=new XMLHttpRequest();
+     request.onreadystatechange=function(){
+         if(request.readyState==XMLHttpRequest.DONE){
+            // Take some action  
+            if(request.status==200){
+              var comments = request.responseText;
+              var list=comments;
+              var ul = document.getElementById('commentList');
+              ul.innerHTML =list ; 
+             }
+          }
+     };
+     request.open('GET','http://gaurav-maskara.imad.hasura-app.io/comments',true);
+     request.send(null);
 };
