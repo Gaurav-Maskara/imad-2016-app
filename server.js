@@ -333,7 +333,7 @@ app.get('/:articleName' ,function(req, res){
 });
 
 app.get('/resume', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'pdf-sample.pdf'));
+  res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
 app.get('/ui/main.js', function (req , res){
