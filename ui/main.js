@@ -60,8 +60,8 @@
      
  };
  
-  var feedback =document.getElementById('feedback');
-  button.onclick=function(){
+  function myfunction(){
+      alert("main.js call");
         var request=new XMLHttpRequest();
         request.onreadystatechange=function(){
          if(request.readyState==XMLHttpRequest.DONE){
