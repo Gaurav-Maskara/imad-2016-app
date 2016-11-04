@@ -61,6 +61,8 @@
  };
  
   function feedback(){
+      
+      alert("test");
        
         var request=new XMLHttpRequest();
         request.onreadystatechange=function(){
