@@ -25,10 +25,7 @@
      
  };*/
  
-$(document).on("pagecontainerload",function(){
-  alert("Loaded");
-});
- 
+
  var commentSubmitButton=document.getElementById("submitComment");
  function myfunction(){
      
