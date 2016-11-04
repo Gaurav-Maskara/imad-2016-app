@@ -57,6 +57,6 @@
      
  }
  
-function myAlert(){
-    alert("Successfully Loaded");
-}
+window.onload = function() {
+  yourFunction(param1, param2);
+};
