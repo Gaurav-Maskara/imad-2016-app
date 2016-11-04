@@ -250,7 +250,7 @@ app.get("/submit-comment",function(req ,res){
                res.status(404).send('Unable to fetch comments from the database');
             }
             else{
-                for(var i=0;i<result.rows.length;i++){
+                for(var i=0;i<=result.rows.length;i++){
                      comments=comments+"<li>"+result.rows[i].comment+"</li>";
                 }
                   res.send(comments);
