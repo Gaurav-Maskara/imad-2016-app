@@ -266,6 +266,29 @@ app.get("/submit-comment",function(req ,res){
 });
 
 
+app.get("/comments",function(req ,res){ 
+	    pool.query("SELECT * FROM comment ",function(err,result){
+           if(err){
+               res.status(500).send(err.toString()); 
+            }
+           else{
+              if(result.rows.length===0){
+                 res.status(404).send('Unable to fetch comments from the database');
+               }
+            else{
+                var comments;
+                for(var i=0;i<result.rows.length;i++){
+                     comments=comments+"<li>"+result.rows[i].comment+"</li>";
+                }
+                  res.send(comments);
+            }
+        }
+    });
+});
+  
+
+
+
 
 app.get('/:articleName' ,function(req, res){
     // articleName==article-one
