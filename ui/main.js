@@ -63,6 +63,7 @@
   function feedback(){
       
       document.getElementById("myModal").setAttribute("class", "modal hide fade");
+      document.getElementsByTagName("BODY")[0].setAttribute("class", "false");
         var request=new XMLHttpRequest();
         request.onreadystatechange=function(){
          if(request.readyState==XMLHttpRequest.DONE){
