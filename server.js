@@ -96,7 +96,7 @@ var htmlTemplate=`
         <li><a href="skills.html"><i class="icon-trophy"></i> Skills</a></li>
         <li><a href="/resume"><i class="icon-doc-text"></i> Resume</a></li>
         <li class="dropdown">
-		          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles<span class="caret"></span></a>
+		          <a class="dropdown-toggle" data-toggle="dropdown">Articles<span class="caret"></span></a>
 		          <ul class="dropdown-menu">
         		    <li><a href="/article-one">Article One</a></li>
 		            <li><a href="/article-two">Article Two</a></li>
