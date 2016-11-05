@@ -17,7 +17,7 @@ app.use(morgan('combined'));
 
 
 
-var articles={
+/*var articles={
 
 'article-one':{
     title:'Article One| Gaurav Maskara',
@@ -61,7 +61,7 @@ var articles={
        
        `
 }
-};
+};*/
 
 function createTemplate(data){
 
@@ -98,9 +98,9 @@ var htmlTemplate=`
         <li class="dropdown">
 		          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles<span class="caret"></span></a>
 		          <ul class="dropdown-menu">
-        		    <li><a href="#">Article One</a></li>
-		            <li><a href="#">Article Two</a></li>
-        		    <li><a href="#">Article Three</a></li> 
+        		    <li><a href="/article-one">Article One</a></li>
+		            <li><a href="article-two">Article Two</a></li>
+        		    <li><a href="article-three">Article Three</a></li> 
 		          </ul>
         </li>
       </ul>
