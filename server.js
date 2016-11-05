@@ -92,13 +92,20 @@ var htmlTemplate=`
   <div class="navbar-inner">
     <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="index.html"><img src="img/user.jpg" alt=""></a>
       <ul class="nav nav-collapse pull-right">
-        <li><a href="index.html"><i class="icon-user"></i> Profile</a></li>
+        <li><a href="/" class="active"><i class="icon-user"></i> Profile</a></li>
         <li><a href="skills.html"><i class="icon-trophy"></i> Skills</a></li>
-        <li><a href="work.html" class="active"><i class="icon-picture"></i> Articles</a></li>
-        <li><a href="resume.html"><i class="icon-doc-text"></i> Resume</a></li>
+        <li><a href="/resume"><i class="icon-doc-text"></i> Resume</a></li>
+        <li class="dropdown">
+		          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles<span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+        		    <li><a href="#">Article One</a></li>
+		            <li><a href="#">Article Two</a></li>
+        		    <li><a href="#">Article Three</a></li> 
+		          </ul>
+        </li>
       </ul>
-        <ul class="nav nav-collapse pull-right">
-        <li><a href="index.html" class="active"><i class="icon-doc-text"></i> Login/SignUp</a></li>
+       <ul class="nav nav-collapse pull-right">
+        <li><a href="index.html" class="active"><i class="icon-doc-text"></i> LOGIN/SIGNUP</a></li>
       </ul>
       <div class="nav-collapse collapse"></div>
     </div>
