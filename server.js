@@ -99,8 +99,8 @@ var htmlTemplate=`
 		          <a class="dropdown-toggle" data-toggle="dropdown" href="#">Articles<span class="caret"></span></a>
 		          <ul class="dropdown-menu">
         		    <li><a href="/article-one">Article One</a></li>
-		            <li><a href="article-two">Article Two</a></li>
-        		    <li><a href="article-three">Article Three</a></li> 
+		            <li><a href="/article-two">Article Two</a></li>
+        		    <li><a href="/article-three">Article Three</a></li> 
 		          </ul>
         </li>
       </ul>
