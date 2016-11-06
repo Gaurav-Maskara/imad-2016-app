@@ -94,7 +94,7 @@ var htmlTemplate=`
       <ul class="nav nav-collapse pull-right">
         <li><a href="/" class="active"><i class="icon-user"></i> Profile</a></li>
         <li><a href="skills.html"><i class="icon-trophy"></i> Skills</a></li>
-        <li><a href="/resume"><i class="icon-doc-text"></i> Resume</a></li>
+        <li><a href="/resume/Gaurav_Maskara_Resume"><i class="icon-doc-text"></i> Resume</a></li>
         <li class="dropdown">
 		          <a class="dropdown-toggle" data-toggle="dropdown">Articles<span class="caret"></span></a>
 		          <ul class="dropdown-menu">
@@ -311,7 +311,7 @@ app.get("/feedback",function(req ,res){
   
 });
 
-app.get('/resume', function (req, res) {
+app.get('/resume/Gaurav_Maskara_Resume', function (req, res) {
    res.sendFile(path.join(__dirname, 'ui', 'Gaurav_Maskara_Resume.pdf'));
 });
 
