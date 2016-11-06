@@ -312,7 +312,7 @@ app.get("/feedback",function(req ,res){
 });
 
 app.get('/resume', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'pdf-sample.pdf'));
+   res.sendFile(path.join(__dirname, 'ui', 'Gaurav_Maskara_Resume.pdf'));
 });
 
 
