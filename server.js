@@ -156,22 +156,21 @@ var htmlTemplate=`
 </div>
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-header">
-    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-    <h3 id="myModalLabel"><i class="icon-mail"></i> Contact Me</h3>
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">x</button>
+    <h3 id="myModalLabel"><i class="icon-mail"></i> Submit Your Feedback</h3>
   </div>
-   <div class="modal-body">
-    <form action="#">
-      <input type="text" placeholder="Your Name">
-      <input type="text" placeholder="Your Email">
-      <input type="text" placeholder="Website (Optional)">
-      <textarea rows="3" style="width:80%"></textarea>
+  <div class="modal-body">
+      <input type="text" placeholder="Your Name" id="name">
+      <input type="text" placeholder="Your Email" id="email">
+      <input type="text" placeholder="Website (Optional)" id="website">
+      <textarea rows="3" style="width:80%" id="text"></textarea>
       <br>
-      <button type="submit" class="btn btn-large"><i class="icon-paper-plane"></i> SUBMIT</button>
-    </form>
+      <button type="submit" class="btn btn-large" onclick="return feedback()"><i class="icon-paper-plane"></i> SUBMIT</button>
   </div>
 </div>
 <script src="js/jquery-1.10.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/ui/main.js"></script>
 <script>
 $('#myModal').modal('hidden')
 </script>
