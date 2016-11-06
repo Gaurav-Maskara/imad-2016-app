@@ -47,7 +47,6 @@
                 
              }
           }
-         
      };
      
      var comment=document.getElementById("textBox");
