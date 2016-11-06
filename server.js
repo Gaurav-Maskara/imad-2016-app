@@ -332,8 +332,8 @@ app.get('/:articleName' ,function(req, res){
 
 });
 
-app.get('/resume/resume', function (req, res) {
-   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
+app.get('/resume', function (req, res) {
+   res.send("Resume will be served here");
 });
 
 app.get('/ui/main.js', function (req , res){
