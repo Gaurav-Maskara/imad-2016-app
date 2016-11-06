@@ -58,7 +58,12 @@
  
 window.onload = function() {
     
-    alert(myip);
+      $.getJSON('http://freegeoip.net/json/', function (location) {
+         alert( location.ip+" "+location.city+" "+location.country_code);
+         
+        }); 
+    
+    //alert(myip);
      var request=new XMLHttpRequest();
      request.onreadystatechange=function(){
          if(request.readyState==XMLHttpRequest.DONE){
