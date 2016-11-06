@@ -312,7 +312,7 @@ app.get("/feedback",function(req ,res){
 });
 
 app.get('/resume', function (req, res) {
-   res.send("Resume will be served here");
+   res.sendFile(path.join(__dirname, 'ui', 'pdf-sample.pdf'));
 });
 
 
