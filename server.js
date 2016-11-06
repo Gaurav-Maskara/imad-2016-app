@@ -311,6 +311,27 @@ app.get("/feedback",function(req ,res){
   
 });
 
+
+
+app.get("/client/details",function(req ,res){ 
+
+	var ip=req.query.ip;
+	var city=req.query.city;
+	var region=req.query.region;
+	var country=req.query.country;
+    
+   
+    pool.query("insert into feedback (name,email,website,text) values ($1,$2,$3,$4)",[ip,city,region,country],function(err,result){
+       if (err)
+			res.status(500).send(err.toString());
+
+	else{
+	  
+	    }	
+    });
+  
+});
+
 app.get('/resume/Gaurav_Maskara_Resume', function (req, res) {
    res.sendFile(path.join(__dirname, 'ui', 'Gaurav_Maskara_Resume.pdf'));
 });
