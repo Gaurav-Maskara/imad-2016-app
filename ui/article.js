@@ -57,6 +57,8 @@
  }
  
 window.onload = function() {
+    
+    alert(myip);
      var request=new XMLHttpRequest();
      request.onreadystatechange=function(){
          if(request.readyState==XMLHttpRequest.DONE){
