@@ -86,6 +86,7 @@ var htmlTemplate=`
 <link href="font/css/fontello.css" rel="stylesheet">
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen">
+<script type="text/javascript" src="http://l2.io/ip.js?var=myip"></script>
 </head>
 <body>
 <div class="navbar">
