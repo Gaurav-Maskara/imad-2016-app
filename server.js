@@ -311,6 +311,11 @@ app.get("/feedback",function(req ,res){
   
 });
 
+app.get('/resume', function (req, res) {
+   res.send("Resume will be served here");
+});
+
+
 app.get('/:articleName' ,function(req, res){
     // articleName==article-one
     
@@ -332,9 +337,7 @@ app.get('/:articleName' ,function(req, res){
 
 });
 
-app.get('/resume', function (req, res) {
-   res.send("Resume will be served here");
-});
+
 
 app.get('/ui/main.js', function (req , res){
 	res.sendFile(path.join(__dirname, 'ui', 'main.js'));
