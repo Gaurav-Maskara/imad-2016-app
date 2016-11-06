@@ -87,6 +87,7 @@
  };
  
  function getip(json){
+     alert("Hello");
       alert(json.ip); // alerts the ip address
  }
  
