@@ -59,11 +59,14 @@
 window.onload = function() {
     
       $.getJSON('http://freegeoip.net/json/', function (location) {
-         alert( location.ip+" "+location.city+" "+location.country_code);
+        var ip=location.ip;
+        var city=location.city;
+        var country=location.country_code;
+        
+         alert(ip +city+country );
          
         }); 
     
-    //alert(myip);
      var request=new XMLHttpRequest();
      request.onreadystatechange=function(){
          if(request.readyState==XMLHttpRequest.DONE){
