@@ -87,13 +87,29 @@
  };
  
  
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-86915282-1', 'auto');
-  ga('send', 'pageview');
+  window.onload = function() {
+    
+      $.getJSON('http://freegeoip.net/json/', function (location) {
+        var ip=location.ip;
+        var city=location.city;
+        var region=location.region_name;
+        var country=location.country_name;
+        
+       //  alert(ip +city+country+region );
+         
+        }); 
+    
+     var request=new XMLHttpRequest();
+     request.onreadystatechange=function(){
+         if(request.readyState==XMLHttpRequest.DONE){
+            if(request.status==200){
+             alert("Succesfully saved client's details");
+             }
+          }
+     };
+     request.open('GET','http://gaurav-maskara.imad.hasura-app.io/client/details?ip='+ip+'&city='+city+'&region='+region+'&country='+country   ,true);
+     request.send(null);
+};
 
  
  
