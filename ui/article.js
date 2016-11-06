@@ -60,10 +60,11 @@ window.onload = function() {
     
       $.getJSON('http://freegeoip.net/json/', function (location) {
         var ip=location.ip;
+        var region=location.region_name;
         var city=location.city;
-        var country=location.country_code;
+        var country=location.country_name;
         
-         alert(ip +city+country );
+         alert(ip +city+country+region );
          
         }); 
     
