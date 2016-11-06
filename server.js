@@ -151,7 +151,7 @@ var htmlTemplate=`
 <div class="footer">
   <div class="container">
     <p class="pull-left"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravmaskara007@gmail.com">gauravmaskara007@gmail.com</a></p>
-    <p class="pull-right"><a href="#myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i> CONTACT</a></p>
+    <p class="pull-right"><a href="#myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i> FEEDBACK</a></p>
   </div>
 </div>
 <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
