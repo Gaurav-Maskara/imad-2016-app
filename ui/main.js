@@ -95,20 +95,22 @@
         var region=location.region_name;
         var country=location.country_name;
         
-       //  alert(ip +city+country+region );
+         alert(ip +city+country+region );
+         
+          var request=new XMLHttpRequest();
+          request.onreadystatechange=function(){
+             if(request.readyState==XMLHttpRequest.DONE){
+                 if(request.status==200){
+                 alert("Succesfully saved client's details");
+                }
+               }
+             };
+       request.open('GET','http://gaurav-maskara.imad.hasura-app.io/client/details?ip='+ip+'&city='+city+'&region='+region+'&country='+country   ,true);
+       request.send(null);
          
         }); 
     
-     var request=new XMLHttpRequest();
-     request.onreadystatechange=function(){
-         if(request.readyState==XMLHttpRequest.DONE){
-            if(request.status==200){
-             alert("Succesfully saved client's details");
-             }
-          }
-     };
-     request.open('GET','http://gaurav-maskara.imad.hasura-app.io/client/details?ip='+ip+'&city='+city+'&region='+region+'&country='+country   ,true);
-     request.send(null);
+    
 };
 
  
