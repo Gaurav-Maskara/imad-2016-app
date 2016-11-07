@@ -114,7 +114,7 @@
 };*/
 
 
-function saveClient(location){
+function save(location){
       
       //  alert(ip+city);
         
