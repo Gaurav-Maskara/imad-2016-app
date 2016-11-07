@@ -35,7 +35,8 @@
          request.onreadystatechange=function(location){
          if(request.readyState==XMLHttpRequest.DONE){
             if(request.status==200){
-               alert(location.city)
+               var location = request.responseText;
+               alert(location)
                 
              }
           }
