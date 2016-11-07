@@ -36,8 +36,11 @@
          if(request.readyState==XMLHttpRequest.DONE){
             if(request.status==200){
                var location = request.responseText;
-                location=JSON.parse(location);
-               alert(location.ip)
+               saveClient(location);
+               
+               
+               // location=JSON.parse(location);
+                //alert(location.ip)
                 
              }
           }
