@@ -15,7 +15,7 @@
 
 <script>
  window.onload = function() {
-    
+    /*
       $.getJSON('http://freegeoip.net/json/', function (location) {
         var ip=location.ip;
         var region=location.region_name;
@@ -27,7 +27,25 @@
         
          
          
-        }); 
+        }); */
+        
+        
+        
+         var request=new XMLHttpRequest();
+         request.onreadystatechange=function(location){
+         if(request.readyState==XMLHttpRequest.DONE){
+            if(request.status==200){
+               alert(location.city)
+                
+             }
+          }
+         
+     };
+     
+     request.open('GET','http://freegeoip.net/json/'   ,true);
+     request.send(null);
+        
+        
     
 };
 </script>
