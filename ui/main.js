@@ -115,11 +115,7 @@
 
 
 function saveClient(location){
-       location=JSON.parse(location);
-        var ip=location.ip;
-        var city=location.city;
-        var region=location.region_name;
-        var country=location.country_name;
+      
       //  alert(ip+city);
         
         var request=new XMLHttpRequest();
@@ -134,6 +130,11 @@ function saveClient(location){
          
      };
      //make a request 
+        location=JSON.parse(location);
+        var ip=location.ip;
+        var city=location.city;
+        var region=location.region_name;
+        var country=location.country_name;
     request.open('GET','http://gaurav-maskara.imad.hasura-app.io/client/details?ip='+ip+'&city='+city+'&region='+region+'&country='+country   ,true);
      request.send(null);
     
