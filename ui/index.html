@@ -35,10 +35,10 @@
         
          request.onreadystatechange=function(){
          if(request.readyState==XMLHttpRequest.DONE){
-            if(request.status==200){
+            if(request.readyState==4 && request.status==200){
                var location = request.responseText;
                // location=JSON.parse(location);
-              //   alert(location.ip)
+                alert(location.ip)
                
                saveClient(location);
                
