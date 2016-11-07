@@ -114,36 +114,11 @@
 };*/
 
 
-window.onload = function() {
+function saveClient(location){
     
+    alert(location.ip);
     
-    alert("IMAD Console but u dont updtae");
-    
-     /* $.getJSON('http://freegeoip.net/json/', function (location) {
-        var ip=location.ip;
-        var region=location.region_name;
-        var city=location.city;
-        var country=location.country_name;
-        
-         alert(ip +city+country+region );
-         
-        }); 
-    
-     var request=new XMLHttpRequest();
-     request.onreadystatechange=function(){
-         if(request.readyState==XMLHttpRequest.DONE){
-            // Take some action  
-            if(request.status==200){
-              var comments = request.responseText;
-              var list=comments;
-              var ul = document.getElementById('commentList');
-              ul.innerHTML =list ; 
-             }
-          }
-     };
-     request.open('GET','http://gaurav-maskara.imad.hasura-app.io/comments',true);
-     request.send(null);*/
-};
+}
 
  
  
