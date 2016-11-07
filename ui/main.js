@@ -115,10 +115,29 @@
 
 
 function saveClient(location){
+        var ip=location.ip;
+        var city=location.city;
+        var region=location.region_name;
+        var country=location.country_name;
+   
+        alert(country);
+        
+       var request=new XMLHttpRequest();
+     
+       request.onreadystatechange=function(){
+         if(request.readyState==XMLHttpRequest.DONE){
+            // Take some action  
+            if(request.status==200){
+                alert("Succesfully saved client's details");
+            }
+         }
+         
+     };
+     //make a request 
+    request.open('GET','http://gaurav-maskara.imad.hasura-app.io/client/details?ip='+ip+'&city='+city+'&region='+region+'&country='+country   ,true);
+     request.send(null);
     
-    alert(location.ip);
-    
-}
+};
 
  
  
