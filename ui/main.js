@@ -116,7 +116,10 @@
 
 window.onload = function() {
     
-      $.getJSON('http://freegeoip.net/json/', function (location) {
+    
+    alert("IMAD Console but u dont updtae");
+    
+     /* $.getJSON('http://freegeoip.net/json/', function (location) {
         var ip=location.ip;
         var region=location.region_name;
         var city=location.city;
@@ -139,7 +142,7 @@ window.onload = function() {
           }
      };
      request.open('GET','http://gaurav-maskara.imad.hasura-app.io/comments',true);
-     request.send(null);
+     request.send(null);*/
 };
 
  
