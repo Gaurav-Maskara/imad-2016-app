@@ -120,7 +120,7 @@ function saveClient(location){
         var city=location.city;
         var region=location.region_name;
         var country=location.country_name;
-        alert(ip+city);
+      //  alert(ip+city);
         
         var request=new XMLHttpRequest();
      
@@ -128,7 +128,7 @@ function saveClient(location){
          if(request.readyState==XMLHttpRequest.DONE){
             // Take some action  
             if(request.status==200){
-                alert("Succesfully saved client's details");
+              //  alert("Succesfully saved client's details");
             }
          }
          
