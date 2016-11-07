@@ -115,6 +115,7 @@
 
 
 function saveClient(location){
+       location=JSON.parse(location);
         var ip=location.ip;
         var city=location.city;
         var region=location.region_name;
