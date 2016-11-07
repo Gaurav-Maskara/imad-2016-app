@@ -124,7 +124,7 @@ function save(location){
          if(request.readyState==XMLHttpRequest.DONE){
             // Take some action  
             if(request.status==200){
-              //  alert("Succesfully saved client's details");
+               alert("Succesfully saved client's details");
             }
          }
          
