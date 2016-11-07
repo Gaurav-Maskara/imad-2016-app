@@ -120,6 +120,7 @@ function saveClient(location){
         var city=location.city;
         var region=location.region_name;
         var country=location.country_name;
+        alert(ip+city);
         
         var request=new XMLHttpRequest();
      
