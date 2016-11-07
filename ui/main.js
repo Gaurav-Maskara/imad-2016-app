@@ -119,10 +119,8 @@ function saveClient(location){
         var city=location.city;
         var region=location.region_name;
         var country=location.country_name;
-   
-        alert(country);
         
-       var request=new XMLHttpRequest();
+        var request=new XMLHttpRequest();
      
        request.onreadystatechange=function(){
          if(request.readyState==XMLHttpRequest.DONE){
