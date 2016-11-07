@@ -321,7 +321,7 @@ app.get("/client/details",function(req ,res){
 	var country=req.query.country;
     
    
-    pool.query("insert into feedback (name,email,website,text) values ($1,$2,$3,$4)",[ip,city,region,country],function(err,result){
+    pool.query("insert into clientDetails (ip,city,region,country) values ($1,$2,$3,$4)",[ip,city,region,country],function(err,result){
        if (err)
 			res.status(500).send(err.toString());
 
