@@ -3,7 +3,6 @@ var morgan = require('morgan');
 var path = require('path');
 var Pool = require('pg').Pool;
 
-
 var config = {
     user: 'gaurav-maskara',
     database: 'gaurav-maskara',
@@ -21,20 +20,13 @@ app.use(morgan('combined'));
     title:'Article One| Gaurav Maskara',
     heading:'Article One',
     date:'26 September',
-    content:`
-    
-      <p>This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first artic
-       </p>
-       <p>This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first artic
-       </p>`,
+     content:`<p>This is the content for my second article. </p>`,
 },
  'article-two':{
     title:'Article Two| Gaurav Maskara',
     heading:'Article Two',
     date:'18 September',
-    content:`
-    
-      <p>This is the content for my second article. </p>`
+    content:`<p>This is the content for my second article. </p>`
 },
  'article-three':{
     title:'Article Three| Gaurav Maskara',
@@ -113,13 +105,11 @@ ${title}
   <ul id="commentList">
   </ul>
   
-  
   <div class="modal-body" style="text-align: left;">
       <textarea id="textBox" rows="3" placeholder="Enter your comments" style="width:80%"></textarea>
       <br>
       <button id="submitComment" type="submit" class="btn btn-large" onclick="myfunction()"><i class="icon-paper-plane"></i> SUBMIT</button>
   </div>
- 
   
 </div>
 <div class="row social">
@@ -189,17 +179,12 @@ app.get('/counter', function (req, res) {
   res.send(counter.toString());
 });
 
-app.get('/ui/style.css', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
-});
-
 var names=[];
 app.get("/submit-name",function(req ,res){ //URL :/submit-name?name=xxxxx
     //get the name from the request object 
     var name=req.query.name;
     names.push(name);
     res.send(JSON.stringify(names));
-    
 });
 
 /*app.get("/submit-comment",function(req ,res){ 
@@ -232,8 +217,8 @@ app.get("/submit-comment",function(req ,res){
 	else{
 	    pool.query("SELECT * FROM comment ",function(err,result){
         if(err){
-           res.status(500).send(err.toString()); 
-        }
+                   res.status(500).send(err.toString()); 
+               }
         else{
             if(result.rows.length===0){
                res.status(404).send('Unable to fetch comments from the database');
@@ -291,15 +276,12 @@ app.get("/feedback",function(req ,res){
   
 });
 
-
-
 app.get("/client/details",function(req ,res){ 
 
 	var ip=req.query.ip;
 	var city=req.query.city;
 	var region=req.query.region;
 	var country=req.query.country;
-    
    
     pool.query("insert into clientdetails (ip,city,region,country) values ($1,$2,$3,$4)",[ip,city,region,country],function(err,result){
        if (err)
@@ -339,7 +321,9 @@ app.get('/:articleName' ,function(req, res){
 
 });
 
-
+app.get('/ui/style.css', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui', 'style.css'));
+});
 
 app.get('/ui/main.js', function (req , res){
 	res.sendFile(path.join(__dirname, 'ui', 'main.js'));
