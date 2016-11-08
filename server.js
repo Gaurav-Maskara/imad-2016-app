@@ -15,8 +15,6 @@ var config = {
 var app = express();
 app.use(morgan('combined'));
 
-
-
 /*var articles={
 
 'article-one':{
@@ -27,39 +25,22 @@ app.use(morgan('combined'));
     
       <p>This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first artic
        </p>
-       
-       <p>This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first artic
-       </p>
-       
        <p>This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first article. This is the content for my first artic
        </p>`,
-       
-    
 },
  'article-two':{
-    
     title:'Article Two| Gaurav Maskara',
     heading:'Article Two',
     date:'18 September',
     content:`
     
-      <p>This is the content for my second article. 
-       </p>
-       
-       `
+      <p>This is the content for my second article. </p>`
 },
  'article-three':{
-    
-    
     title:'Article Three| Gaurav Maskara',
     heading:'Article Three',
     date:'18 September',
-    content:`
-    
-      <p>This is the content for my third article. 
-       </p>
-       
-       `
+    content:`<p>This is the content for my third article. </p>`
 }
 };*/
 
@@ -75,7 +56,7 @@ var htmlTemplate=`
 <html lang="en">
 <head>
 <title>
- ${title}
+${title}
 </title>
 <link rel="shortcut icon" href="http://i-cdn.phonearena.com/images/article/58161-image/25-cool-new-icon-packs-and-themes-to-freshen-up-your-Android-style-2014-edition.jpg" type="image/x-icon" />
 <meta charset="utf-8">
