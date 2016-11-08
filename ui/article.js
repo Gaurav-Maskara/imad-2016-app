@@ -64,7 +64,7 @@ window.onload = function() {
         var city=location.city;
         var country=location.country_name;
         
-         alert(ip +city+country+region );
+        //    alert(ip +city+country+region );
          
         }); 
     
