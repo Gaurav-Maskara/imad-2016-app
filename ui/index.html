@@ -21,15 +21,9 @@
         var region=location.region_name;
         var city=location.city;
         var country=location.country_name;
-        
-         alert(ip);
+        alert(ip);
         saveClient(location);
-        
-         
-         
         }); */
-        
-        
         
          var request=new XMLHttpRequest();
         
@@ -38,23 +32,13 @@
             if(request.readyState==4 && request.status==200){
                var location = request.responseText;
                // location=JSON.parse(location);
-               
-               
-               save(location);
-              
-               
-               
-                
+                  save(location);
              }
           }
-         
      };
      
      request.open('GET','http://freegeoip.net/json/'   ,true);
      request.send(null);
-        
-        
-    
 };
 </script>
 
@@ -99,6 +83,7 @@
      
     <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravmaskara007@gmail.com" role="button" data-toggle="modal" class="hire-me><i class="icon-paper-plane"></i> Contact </a> </div>
 </div>
+
 <div class="row social">
   <ul class="social-icons">
     <li><a href="#"><img src="img/fb.png" alt=""></a></li>
