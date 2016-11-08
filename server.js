@@ -80,9 +80,9 @@ ${title}
         <li class="dropdown">
 		          <a class="dropdown-toggle" data-toggle="dropdown">Articles<span class="caret"></span></a>
 		          <ul class="dropdown-menu">
-        		    <li><a href="/article-one">Article One</a></li>
-		            <li><a href="/article-two">Article Two</a></li>
-        		    <li><a href="/article-three">Article Three</a></li> 
+        		    <li><a href="/articles/article-one">Article One</a></li>
+		            <li><a href="/articles/article-two">Article Two</a></li>
+        		    <li><a href="/articles/article-three">Article Three</a></li> 
 		          </ul>
         </li>
       </ul>
@@ -104,7 +104,7 @@ ${title}
   ${video}
   </div>
   
-  
+  <br><br><br>
   <div>
    ${content}
   </div>
@@ -161,7 +161,6 @@ $('#myModal').modal('hidden')
 `;
 
 return htmlTemplate;
-
 }
 
 
@@ -318,7 +317,7 @@ app.get('/resume/Gaurav_Maskara_Resume', function (req, res) {
 });
 
 
-app.get('/:articleName' ,function(req, res){
+app.get('/articles/:articleName' ,function(req, res){
     // articleName==article-one
     
     var articleName=req.params.articleName;
