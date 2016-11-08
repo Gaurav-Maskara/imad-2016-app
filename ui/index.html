@@ -41,7 +41,7 @@
          if(request2.readyState==XMLHttpRequest.DONE){
             // Take some action  
             if(request2.status==200){
-               alert("Succesfully saved client's details");
+             //  alert("Succesfully saved client's details");
             }
          }
          
@@ -67,7 +67,7 @@
           }
      };
      
-     alert(Math.random());
+    
      request.open('GET','http://freegeoip.net/json/'   ,true);
      //request.open('GET','http://freegeoip.net/json/?t='+Math.random(),true);
      request.send(null);
