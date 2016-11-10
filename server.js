@@ -175,7 +175,7 @@ app.get('/test-db',function (req, res){
 
 var request = require('then-request');
 
-request('GET', '/counter').done(function (res) {
+request('GET', '/hello').done(function (res) {
   console.log("Successful");
 });
 
