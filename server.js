@@ -173,11 +173,17 @@ app.get('/test-db',function (req, res){
    });
 });
 
-var counter=0;
+var request = require('then-request');
+
+request('GET', '/counter').done(function (res) {
+  console.log("Successful");
+});
+
+/*var counter=0;
 app.get('/counter', function (req, res) {
     counter=counter+1;
   res.send(counter.toString());
-});
+});*/
 
 var names=[];
 app.get("/submit-name",function(req ,res){ //URL :/submit-name?name=xxxxx
@@ -320,6 +326,8 @@ app.get('/:articleName' ,function(req, res){
     });
 
 });
+
+
 
 app.get('/ui/style.css', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'style.css'));
