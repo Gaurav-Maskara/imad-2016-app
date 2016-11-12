@@ -66,7 +66,7 @@
         var request=new XMLHttpRequest();
         request.onreadystatechange=function(){
          if(request.readyState==XMLHttpRequest.DONE){
-            if(request.status==200){
+            if(request.status===200){
               window.close();
               return true;
              }
@@ -142,7 +142,40 @@ function save(location){
 
  
  
-
+// submit username and password to login into the app
+ var submit_login =document.getElementById("submit_login");
+ submit_login.onclick=function(){
+      //Create a request object 
+       
+     var request=new XMLHttpRequest();
+     
+     //capture the response and store it in a variable
+     request.onreadystatechange=function(){
+         if(request.readyState==XMLHttpRequest.DONE){
+            // Take some action  
+            if(request.status===200){
+               console.log("user logged in ");
+             }
+             else if(request.status===403){
+                 
+             }
+             else if(request.status===500){
+                 
+             }
+            
+          }
+         
+     };
+       var username=document.getElementById("username").value;
+       var password=document.getElementById("password").value;
+     //make a request 
+     request.open('POST','http://gaurav-maskara.imad.hasura-app.io/login', true);
+     request.setRequestHeader('Content-Type','application/json');
+     request.send(JSON.stringify({username: username, password: password}));
+     
+    
+     
+ };
  
  
  
