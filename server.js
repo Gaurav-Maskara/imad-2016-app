@@ -209,9 +209,9 @@ app.post('/login',function(req,res){
            
            else{
                //Match the password
-               var dbString=result.rows[0].password;
-               var salt=dbString.split('$')[2];
-               var hashedPassword=hash(password, salt);// creating a hash based on the submitted password and the original salt
+               var dbString = result.rows[0].password;
+               var salt = dbString.split('$')[2];
+               var hashedPassword = hash(password, salt);// creating a hash based on the submitted password and the original salt
                if(hashedPasword===dbString){
                    res.send('credentials correct ');
                }
@@ -222,6 +222,7 @@ app.post('/login',function(req,res){
        }
     }); 
 });
+
 
 var pool = new Pool(config);
 app.get('/test-db',function (req, res){
