@@ -55,13 +55,7 @@
         request2.open('GET','http://gaurav-maskara.imad.hasura-app.io/client/details?ip='+ip+'&city='+city+'&region='+region+'&country='+country   ,true);
         request2.send(null);
                  
-                 
-                 
-                 
-                 
-                 
-                 
-                 
+                
                  
              }
           }
@@ -93,35 +87,36 @@
         </li>
       </ul>
        <ul class="nav nav-collapse pull-right">
-        <li><a href="index.html" class="active"><i class="icon-doc-text"></i> LOGIN/SIGNUP</a></li>
+        <li><a href="#loginModal" role="button" data-toggle="modal" class="active"><i class="icon-doc-text"></i> LOGIN/SIGNUP</a></li>
       </ul>
       <div class="nav-collapse collapse"></div>
     </div>
   </div>
 </div>
-<!--<div class="container profile">
+<div class="container profile">
   <div class="span3"> <img src="img/gaurav.png" alt="Gaurav Maskara"> </div>
-   <div class="span5">
+  <div class="span5">
     <h1>Gaurav Maskara</h1>
     <h3>Java/JEE & Web Designer</h3>
     <p> Hello. I am Gaurav Maskara , a Computer Science Engineer from Delhi </p>
     <ul>
-      <li>I completed my B.Tech in Computer Science & Engineering from IET Lucknow in the year 2015</li>
+      <li>I did my B.Tech in Computer Science & Engineering from IET Lucknow</li>
       <li>Currently I am working at TCS as Assistant System Engineer</li>
       <li>I have 11 months of experience in JAVA/JEE</li>
-      <li>Currently I am working on SOAP Web Services project at TCS</li>
+      <li>Currently I am working on SOAP Web Services</li>
       <li>I also worked for 4 months on Spring/JEE framework based Web Application</li>
     </ul>
      
-    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravmaskara007@gmail.com" role="button" data-toggle="modal" class="hire-me><i class="icon-paper-plane"></i> Contact </a> </div>
-</div>-->
+    <a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravmaskara007@gmail.com" role="button" data-toggle="modal" class="hire-me"><i class="icon-paper-plane"></i> Contact </a> </div>
+</div>
+
 
 <div class="row social">
   <ul class="social-icons">
-    <li><a href="#"><img src="img/fb.png" alt=""></a></li>
+    <li><a href="https://www.facebook.com/gaurav.maskara.7"><img src="img/fb.png" alt=""></a></li>
     <li><a href="https://www.linkedin.com/in/gaurav-maskara-8682a0a6?trk=hp-identity-name"><img src="img/linkedin_circle_color-512.png" alt=""></a></li>
-    <li><a href="#"><img src="img/tw.png" alt=""></a></li>
-    <li><a href="#"><img src="img/go.png" alt=""></a></li>
+    <li><a href="https://twitter.com/MaskaraGaurav"><img src="img/tw.png" alt=""></a></li>
+    <li><a href="https://plus.google.com/u/0/105122053130989041348"><img src="img/go.png" alt=""></a></li>
   </ul>
 </div>
 <div class="footer" href="css/bootstrap-responsive.css" rel="stylesheet" type="text/css">
@@ -145,6 +140,23 @@
       <button type="submit" class="btn btn-large" onclick="return feedback()"><i class="icon-paper-plane"></i> SUBMIT</button>
   </div>
 </div>
+
+<div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">x</button>
+    <h3 id="myModalLabel"><i class="icon-user"></i> Login to unlock awesome features</h3>
+  </div>
+  <div class="modal-body">
+      <input type="text" placeholder="Username" id="username">
+      <input type="password" placeholder="Enter your password" id="password">
+      <br>
+      <button type="submit" class="btn btn-large" id="login_btn"><i class="icon-paper-plane"></i> SUBMIT</button>
+       <br><br>
+       <p><a href="#myModal" role="button" data-toggle="modal"> <i class="icon-doc-text"></i><b> New user click here to register</b></a></p>
+  </div>
+</div>
+
+
 <script src="js/jquery-1.10.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
