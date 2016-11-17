@@ -200,7 +200,7 @@ function registerFunction(){
 
 function loadLogin() {
     // Checking if the user is already logged in
-    alert("inside load login");
+  //  alert("inside load login");
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -217,7 +217,7 @@ function loadLogin() {
 }
 
 function loadLoggedInUser(username) {
-    alert("loadLoggedInUser");
+ //   alert("loadLoggedInUser");
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
            <li class="dropdown">
