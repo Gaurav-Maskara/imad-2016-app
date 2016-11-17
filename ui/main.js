@@ -124,7 +124,7 @@ function save(location){
 
 //submit username and password to login into the app
 var login = document.getElementById('login_btn');
-login.onclick = function () {
+ function loginFunction () {
 	// Create a request object
 	var request = new XMLHttpRequest();
 
