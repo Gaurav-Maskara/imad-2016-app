@@ -198,7 +198,7 @@ function registerFunction(){
 
 function loadLogin() {
     // Checking if the user is already logged in
-     alert("loadLogin");
+    alert("inside load login");
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
