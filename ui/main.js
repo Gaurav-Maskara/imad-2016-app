@@ -126,6 +126,7 @@ function save(location){
 var login = document.getElementById('login_btn');
  function loginFunction(){
 	// Create a request object
+
 	var request = new XMLHttpRequest();
 
 	// Capture the response and store it in a variable
@@ -133,6 +134,7 @@ var login = document.getElementById('login_btn');
 		if (request.readyState === XMLHttpRequest.DONE) {
 			// Take some action
 			if (request.status === 200) {
+			   	document.getElementById("closeLogin").click();
 				submit.value = 'Success!!';
 			} else if (request.status === 403) {
 				submit.value = 'Invalid credentials,Try again';
@@ -198,6 +200,7 @@ loadLogin();
 
 function loadLogin () {
     // Checking if the user is already logged in
+     alert("loadLogin");
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -214,6 +217,7 @@ function loadLogin () {
 }
 
 function loadLoggedInUser (username) {
+    alert("loadLoggedInUser");
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
            <li class="dropdown">
@@ -226,6 +230,7 @@ function loadLoggedInUser (username) {
 }
 
 function loadLoginForm () {
+    alert("loadLoginForm");
 	var loginArea = document.getElementById('login_area');
 	 loginArea.innerHTML = `
      <li><a href="#loginModal" role="button" data-toggle="modal" class="active"><i class="icon-doc-text"></i> LOGIN/SIGNUP</a></li>  
