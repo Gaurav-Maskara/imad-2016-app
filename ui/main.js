@@ -135,7 +135,7 @@ var login = document.getElementById('login_btn');
 			// Take some action
 			if (request.status === 200) {
 			   	document.getElementById("closeLogin").click();
-			   	
+			   	loadLogin();
 				submit.value = 'Success!!';
 			} else if (request.status === 403) {
 			    alert('Invalid credentials,Try again');
