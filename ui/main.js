@@ -198,7 +198,7 @@ function registerFunction(){
 loadLogin();
 
 
-function loadLogin () {
+function loadLogin() {
     // Checking if the user is already logged in
      alert("loadLogin");
     var request = new XMLHttpRequest();
@@ -216,7 +216,7 @@ function loadLogin () {
     request.send(null);
 }
 
-function loadLoggedInUser (username) {
+function loadLoggedInUser(username) {
     alert("loadLoggedInUser");
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
@@ -229,7 +229,7 @@ function loadLoggedInUser (username) {
     `;
 }
 
-function loadLoginForm () {
+function loadLoginForm() {
     alert("loadLoginForm");
 	var loginArea = document.getElementById('login_area');
 	 loginArea.innerHTML = `
