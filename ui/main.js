@@ -124,7 +124,7 @@ function save(location){
 
 //submit username and password to login into the app
 var login = document.getElementById('login_btn');
- function loginFunction () {
+ function loginFunction(){
 	// Create a request object
 	var request = new XMLHttpRequest();
 
@@ -162,7 +162,7 @@ var login = document.getElementById('login_btn');
 
 
 var register = document.getElementById('register_btn');
-register.onclick = function () {
+function registerFunction(){
     // Create a request object
     var request = new XMLHttpRequest();
     
