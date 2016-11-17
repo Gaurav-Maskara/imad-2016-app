@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>
+Logged out
+</title>
+<link rel="shortcut icon" href="http://i-cdn.phonearena.com/images/article/58161-image/25-cool-new-icon-packs-and-themes-to-freshen-up-your-Android-style-2014-edition.jpg" type="image/x-icon" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script type="text/javascript" src="/ui/article.js"></script>
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="font/css/fontello.css" rel="stylesheet">
+<link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+<link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+</head>
+<body>
+<div class="navbar">
+  <div class="navbar-inner">
+    <div class="container"> <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </a> <a class="brand" href="/"><img src="img/user.jpg" alt=""></a>
+      <ul class="nav nav-collapse pull-right">
+        <li><a href="/" class="active"><i class="icon-user"></i> Profile</a></li>
+        <li><a href="skills.html"><i class="icon-trophy"></i> Skills</a></li>
+        <li><a href="/resume/Gaurav_Maskara_Resume"><i class="icon-doc-text"></i> Resume</a></li>
+        <li class="dropdown">
+		          <a class="dropdown-toggle" data-toggle="dropdown">Articles<span class="caret"></span></a>
+		          <ul class="dropdown-menu">
+        		    <li><a href="/article-one">Article One</a></li>
+		            <li><a href="/article-two">Article Two</a></li>
+        		    <li><a href="/article-three">Article Three</a></li> 
+		          </ul>
+        </li>
+      </ul>
+      <div class="nav-collapse collapse"></div>
+    </div>
+  </div>
+</div>
+
+<div class="container work">
+  <h2>Logged Out</h2>
+  <h3><a href="/">Back to home</a></h3>
+</div>
+<div class="footer">
+  <div class="container">
+    <p class="pull-left"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravmaskara007@gmail.com">gauravmaskara007@gmail.com</a></p>
+    <p class="pull-right"><a href="#myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i> FEEDBACK</a></p>
+  </div>
+</div>
+<div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="close">x</button>
+    <h3 id="myModalLabel"><i class="icon-mail"></i> Submit Your Feedback</h3>
+  </div>
+  <div class="modal-body">
+      <input type="text" placeholder="Your Name" id="name">
+      <input type="text" placeholder="Your Email" id="email">
+      <input type="text" placeholder="Website (Optional)" id="website">
+      <textarea rows="3" style="width:80%" id="text"></textarea>
+      <br>
+      <button type="submit" class="btn btn-large" onclick="return feedback()"><i class="icon-paper-plane"></i> SUBMIT</button>
+  </div>
+</div>
+<script src="js/jquery-1.10.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/ui/main.js"></script>
+<script>
+$('#myModal').modal('hidden')
+</script>
+</body>
+</html>
