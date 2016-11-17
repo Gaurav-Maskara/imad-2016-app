@@ -135,17 +135,10 @@ var login = document.getElementById('login_btn');
 			// Take some action
 			if (request.status === 200) {
 			   	document.getElementById("closeLogin").click();
-			   	  var loginArea = document.getElementById('login_area');
-        loginArea.innerHTML = `
-           <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown">ggggg<span class="caret"></span></a>
-                <ul class="dropdown-menu">
-		        <li><a href="/logout">Logout</a></li>
-               </ul>
-           </li>
-    `;
+			   	
 				submit.value = 'Success!!';
 			} else if (request.status === 403) {
+			    alert('Invalid credentials,Try again');
 				submit.value = 'Invalid credentials,Try again';
 			} else if (request.status === 500) {
 				alert('Something went wrong on the server');
