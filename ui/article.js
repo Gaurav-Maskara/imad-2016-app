@@ -83,3 +83,8 @@ window.onload = function() {
      request.open('GET','http://gaurav-maskara.imad.hasura-app.io/comments',true);
      request.send(null);
 };
+
+
+function checkLogin(){
+    alert("Inside check login");
+}
