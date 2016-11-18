@@ -206,9 +206,9 @@ function loadLogin() {
         if (request.readyState === XMLHttpRequest.DONE) {
             if (request.status === 200) {
                 loadLoggedInUser(this.responseText);
-            } else {
+            }/* else {
                 loadLoginForm();
-            }
+            }*/
         }
     };
     
@@ -221,7 +221,7 @@ function loadLoggedInUser(username) {
     var loginArea = document.getElementById('login_area');
     loginArea.innerHTML = `
            <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown">${username}<span class="caret"></span></a>
+                <a class="dropdown-toggle" data-toggle="dropdown"><b>HI, ${username}</b><span class="caret"></span></a>
                 <ul class="dropdown-menu">
 		        <li><a href="/logout">Logout</a></li>
                </ul>
@@ -229,14 +229,14 @@ function loadLoggedInUser(username) {
     `;
 }
 
-function loadLoginForm() {
-    alert("loadLoginForm");
+/*function loadLoginForm() {
+  
 	var loginArea = document.getElementById('login_area');
 	 loginArea.innerHTML = `
      <li><a href="#loginModal" role="button" data-toggle="modal" class="active"><i class="icon-doc-text"></i> LOGIN/SIGNUP</a></li>  
 `;
 	
-}
+}*/
 
 //The first thing to do is to check if the user is logged in!
 loadLogin();
