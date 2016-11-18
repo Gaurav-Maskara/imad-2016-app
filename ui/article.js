@@ -107,8 +107,7 @@ function loadCommentForm(){
 
 
 function loadComments () {
-        // Check if the user is already logged in
-        alert("Inside load comments");
+       
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
