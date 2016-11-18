@@ -68,6 +68,12 @@ ${title}
 <link href='http://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
 <link rel="stylesheet" type="text/css" href="css/jquery.fancybox.css" media="screen">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+<script>
+ window.onload = function() {
+    checkLogin();
+</script>
+
 </head>
 <body>
 <div class="navbar">
