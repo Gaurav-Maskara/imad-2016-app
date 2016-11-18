@@ -73,6 +73,7 @@ ${title}
  window.onload = function() {
     checkLogin();
     loadComments();
+     loadLogin();
  }
 </script>
 
@@ -94,8 +95,8 @@ ${title}
 		          </ul>
         </li>
       </ul>
-       <ul class="nav nav-collapse pull-right">
-        <li><a href="index.html" class="active"><i class="icon-doc-text"></i> LOGIN/SIGNUP</a></li>
+       <ul class="nav nav-collapse pull-right" id="login_area">
+        <li><a href="#loginModal" role="button" data-toggle="modal" class="active"><i class="icon-doc-text"></i> LOGIN/SIGNUP</a></li>
       </ul>
       <div class="nav-collapse collapse"></div>
     </div>
@@ -158,6 +159,21 @@ ${title}
       <button type="submit" class="btn btn-large" onclick="return feedback()"><i class="icon-paper-plane"></i> SUBMIT</button>
   </div>
 </div>
+
+<div id="loginModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true" id="closeLogin">x</button>
+    <h3 id="myModalLabel"><i class="icon-user"></i> Login to unlock awesome features</h3>
+  </div>
+  <div class="modal-body">
+      <input type="text" placeholder="Username" id="username">
+      <input type="password" placeholder="Enter your password" id="password">
+      <br>
+      <button type="submit" class="btn btn-large" id="login_btn" onclick="loginFunction()"><i class="icon-paper-plane"></i> Login</button>
+      <button type="submit" class="btn btn-large" id="register_btn" onclick="registerFunction()"><i class="icon-doc-text"></i> Register</button>
+  </div>
+</div>
+
 <script src="js/jquery-1.10.1.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/ui/main.js"></script>
