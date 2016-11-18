@@ -86,5 +86,26 @@ window.onload = function() {
 
 
 function checkLogin(){
-    alert("Inside check login");
+    
+    
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            if (request.status === 200) {
+                loadCommentForm(this.responseText);
+            }
+        }
+    };
+    
+    request.open('GET', '/check-login', true);
+    request.send(null);
+   
+    
+}
+
+function loadCommentForm(){
+    var commentBox=`<textarea id="textBox" rows="3" placeholder="Enter your comments" style="width:80%"></textarea>
+      <br>
+      <button id="submitComment" type="submit" class="btn btn-large" onclick="myfunction()"><i class="icon-paper-plane"></i> SUBMIT</button>`;
+      document.getElementById('comment_form').innerHTML = commentBox;
 }
