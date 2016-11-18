@@ -149,7 +149,7 @@ var login = document.getElementById('login_btn');
 			}
 			loadLogin();
 		}  
-		// Not done yet
+	
 	};
 
 	// Make the request
