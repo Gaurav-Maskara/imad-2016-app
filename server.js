@@ -124,9 +124,9 @@ ${title}
   </div>
   
   <div class="modal-body" style="text-align: left;" id="comment_form">
-      <textarea id="textBox" rows="3" placeholder="Enter your comments" style="width:80%"></textarea>
+     /* <textarea id="textBox" rows="3" placeholder="Enter your comments" style="width:80%"></textarea>
       <br>
-      <button id="submitComment" type="submit" class="btn btn-large" onclick="myfunction()"><i class="icon-paper-plane"></i> SUBMIT</button>
+      <button id="submitComment" type="submit" class="btn btn-large" onclick="myfunction()"><i class="icon-paper-plane"></i> SUBMIT</button>*/
   </div>
   
 </div>
@@ -140,7 +140,7 @@ ${title}
 </div>
 <div class="footer">
   <div class="container">
-    <p class="pull-left"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravmaskara007@gmail.com">gauravmaskara007@gmail.com</a></p>
+    <p class="pull-left"><a href="https://mail.google.com/mail/?view=cm&fs=1&to=gauravmaskara007@gmail.com" target="_blank">gauravmaskara007@gmail.com</a></p>
     <p class="pull-right"><a href="#myModal" role="button" data-toggle="modal"> <i class="icon-mail"></i> FEEDBACK</a></p>
   </div>
 </div>
