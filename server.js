@@ -122,10 +122,10 @@ ${title}
 </div>
 <div class="row social">
   <ul class="social-icons">
-    <li><a href="#"><img src="img/fb.png" alt=""></a></li>
-    <li><a href="https://www.linkedin.com/in/gaurav-maskara-8682a0a6?trk=hp-identity-name"><img src="img/linkedin_circle_color-512.png" alt=""></a></li>
-    <li><a href="#"><img src="img/tw.png" alt=""></a></li>
-    <li><a href="#"><img src="img/go.png" alt=""></a></li>
+    <li><a href="https://www.facebook.com/gaurav.maskara.7" target="_blank"><img src="img/fb.png" alt=""></a></li>
+    <li><a href="https://www.linkedin.com/in/gaurav-maskara-8682a0a6?trk=hp-identity-name" target="_blank"><img src="img/linkedin_circle_color-512.png" alt=""></a></li>
+    <li><a href="https://twitter.com/MaskaraGaurav" target="_blank"><img src="img/tw.png" alt=""></a></li>
+    <li><a href="https://plus.google.com/u/0/105122053130989041348" target="_blank"><img src="img/go.png" alt="go"></a></li>
   </ul>
 </div>
 <div class="footer">
