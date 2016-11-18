@@ -71,7 +71,7 @@ ${title}
 
 <script>
  window.onload = function() {
-    checkLogin();
+    checkLogin();}
 </script>
 
 </head>
