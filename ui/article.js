@@ -56,7 +56,7 @@
      
  }
  
-window.onload = function() {
+/*window.onload = function() {
     
       $.getJSON('http://freegeoip.net/json/', function (location) {
         var ip=location.ip;
@@ -82,12 +82,10 @@ window.onload = function() {
      };
      request.open('GET','http://gaurav-maskara.imad.hasura-app.io/comments',true);
      request.send(null);
-};
+};*/
 
 
 function checkLogin(){
-    
-    
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -96,11 +94,8 @@ function checkLogin(){
             }
         }
     };
-    
     request.open('GET', '/check-login', true);
     request.send(null);
-   
-    
 }
 
 function loadCommentForm(){
@@ -108,4 +103,35 @@ function loadCommentForm(){
       <br>
       <button id="submitComment" type="submit" class="btn btn-large" onclick="myfunction()"><i class="icon-paper-plane"></i> SUBMIT</button>`;
       document.getElementById('comment_form').innerHTML = commentBox;
+}
+
+
+function loadComments () {
+        // Check if the user is already logged in
+        alert("Inside load comments");
+    var request = new XMLHttpRequest();
+    request.onreadystatechange = function () {
+        if (request.readyState === XMLHttpRequest.DONE) {
+            var comments = document.getElementById('comments');
+            if (request.status === 200) {
+                var content = '';
+                var commentsData = JSON.parse(this.responseText);
+                for (var i=0; i< commentsData.length; i++) {
+                    var time = new Date(commentsData[i].timestamp);
+                    content += `<div class="comment">
+                        <p>${escapeHTML(commentsData[i].comment)}</p>
+                        <div class="commenter">
+                            ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                        </div>
+                    </div>`;
+                }
+                comments.innerHTML = content;
+            } else {
+                comments.innerHTML('Oops! Could not load comments!');
+            }
+        }
+    };
+    
+    request.open('GET', '/get-comments/' + currentArticleTitle, true);
+    request.send(null);
 }
