@@ -99,7 +99,7 @@ function checkLogin(){
     request.send(null);
 }
 
-function loadCommentForm(){
+function loadCommentForm(username){
     var commentBox=`<textarea id="textBox" rows="3" placeholder="Enter your comments" style="width:80%"></textarea>
       <br>
       <button id="submitComment" type="submit" class="btn btn-large" onclick="myfunction()"><i class="icon-paper-plane"></i> SUBMIT</button>`;
