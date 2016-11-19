@@ -103,7 +103,7 @@ function checkLogin(){
 function loadCommentForm(username){
     var commentBox=`<textarea id="textBox" rows="3" placeholder="Enter your comments" style="width:80%"></textarea>
       <br>
-      <button id="submitComment" type="submit" class="btn btn-large" onclick="myfunction()"><i class="icon-paper-plane"></i> SUBMIT</button>`;
+      <button id="submitComment" type="submit" class="btn btn-large" onclick="submitComment()"><i class="icon-paper-plane"></i> SUBMIT</button>`;
       document.getElementById('comment_form').innerHTML = commentBox;
       
     var loginArea = document.getElementById('login_area');
@@ -146,4 +146,33 @@ function loadComments () {
     
     request.open('GET', '/get-comments/' + currentArticleTitle, true);
     request.send(null);
+}
+
+function submitComment() {
+        // Create a request object
+        alert("Inside submit comment");
+        var request = new XMLHttpRequest();
+        
+        // Capture the response and store it in a variable
+        request.onreadystatechange = function () {
+          if (request.readyState === XMLHttpRequest.DONE) {
+                // Take some action
+                if (request.status === 200) {
+                    // clear the form & reload all the comments
+                    document.getElementById('textBox').value = '';
+                    loadComments();    
+                } else {
+                    alert('Error! Could not submit comment');
+                }
+                submit.value = 'Submit';
+          }
+        };
+        
+        // Make the request
+        var comment = document.getElementById('textBox').value;
+        request.open('POST', '/submit-comment/' + currentArticleTitle, true);
+        request.setRequestHeader('Content-Type', 'application/json');
+        request.send(JSON.stringify({comment: comment}));  
+        submit.value = 'Submitting...';
+        
 }
