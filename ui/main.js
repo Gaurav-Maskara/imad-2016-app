@@ -228,15 +228,12 @@ function loadLoggedInUser(username) {
            </li>
     `;
     
-     var loginArea = document.getElementById('login_area');
-    loginArea.innerHTML = `
-           <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown"><b>HI, ${username}</b><span class="caret"></span></a>
-                <ul class="dropdown-menu">
-		        <li><a href="/logout">Logout</a></li>
-               </ul>
-           </li>
-    `;
+    var commentBox=`<textarea id="textBox" rows="3" placeholder="Enter your comments" style="width:80%"></textarea>
+      <br>
+      <button id="submitComment" type="submit" class="btn btn-large" onclick="myfunction()"><i class="icon-paper-plane"></i> SUBMIT</button>`;
+      document.getElementById('comment_form').innerHTML = commentBox;
+    
+    
 }
 
 /*function loadLoginForm() {
