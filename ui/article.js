@@ -139,7 +139,7 @@ function loadComments () {
                 }
                 comments.innerHTML = content;
             } else {
-                comments.innerHTML('Oops! Could not load comments!');
+                comments.innerHTML='Oops! Could not load comments!';
             }
         }
     };
@@ -158,13 +158,12 @@ function submitComment() {
           if (request.readyState === XMLHttpRequest.DONE) {
                 // Take some action
                 if (request.status === 200) {
-                    // clear the form & reload all the comments
+                    // clearing the form & reloading all the comments
                     document.getElementById('textBox').value = '';
                     loadComments();    
                 } else {
                     alert('Error! Could not submit comment');
                 }
-                sdocument.getElementById('submitComment').value = 'Submit';
           }
         };
         
@@ -173,6 +172,5 @@ function submitComment() {
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comment}));  
-        document.getElementById('submitComment').value = 'Submitting';
         
 }
