@@ -227,6 +227,16 @@ function loadLoggedInUser(username) {
                </ul>
            </li>
     `;
+    
+     var loginArea = document.getElementById('login_area');
+    loginArea.innerHTML = `
+           <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown"><b>HI, ${username}</b><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+		        <li><a href="/logout">Logout</a></li>
+               </ul>
+           </li>
+    `;
 }
 
 /*function loadLoginForm() {
