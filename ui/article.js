@@ -160,11 +160,11 @@ function submitComment() {
                 if (request.status === 200) {
                     // clear the form & reload all the comments
                     document.getElementById('textBox').value = '';
-                   // loadComments();    
+                    loadComments();    
                 } else {
                     alert('Error! Could not submit comment');
                 }
-                submit.value = 'Submit';
+                sdocument.getElementById('submitComment').value = 'Submit';
           }
         };
         
@@ -173,6 +173,6 @@ function submitComment() {
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comment}));  
-        submit.value = 'Submitting...';
+        document.getElementById('submitComment').value = 'Submitting';
         
 }
