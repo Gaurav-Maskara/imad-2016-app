@@ -104,6 +104,16 @@ function loadCommentForm(){
       <br>
       <button id="submitComment" type="submit" class="btn btn-large" onclick="myfunction()"><i class="icon-paper-plane"></i> SUBMIT</button>`;
       document.getElementById('comment_form').innerHTML = commentBox;
+      
+    var loginArea = document.getElementById('login_area');
+    loginArea.innerHTML = `
+           <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown"><b>HI, ${username}</b><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+		        <li><a href="/logout">Logout</a></li>
+               </ul>
+           </li>
+    `;
 }
 
 
