@@ -62,6 +62,7 @@ ${title}
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script type="text/javascript" src="/ui/article.js"></script>
+<script type="text/javascript" src="/ui/main.js"></script>
 <link href="css/bootstrap.css" rel="stylesheet">
 <link href="css/style.css" rel="stylesheet">
 <link href="font/css/fontello.css" rel="stylesheet">
