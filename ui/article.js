@@ -86,6 +86,7 @@
 
 
 function checkLogin(){
+    alert("inside check login");
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
@@ -108,6 +109,7 @@ function loadCommentForm(){
 
 function loadComments () {
        
+       alert("inside load comments");
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
