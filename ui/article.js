@@ -25,6 +25,7 @@
      
  };*/
  
+ var currentArticleTitle = window.location.pathname.split('/')[1];
 
  var commentSubmitButton=document.getElementById("submitComment");
  function myfunction(){
@@ -119,7 +120,7 @@ function loadCommentForm(username){
 
 function loadComments () {
        
-       alert("inside load comments");
+     alert("inside load comments");
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
