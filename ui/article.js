@@ -138,6 +138,7 @@ function loadComments () {
                         </div>
                     </div>`;
                 }
+                alert(content);
                 comments.innerHTML = content;
             } else {
                 comments.innerHTML='Oops! Could not load comments!';
