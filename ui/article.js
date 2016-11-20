@@ -126,6 +126,7 @@ function loadComments () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var comments = document.getElementById('comments');
             if (request.status === 200) {
+                alert("response received from the server");
                 var content = '';
                 var commentsData = JSON.parse(this.responseText);
                 for (var i=0; i< commentsData.length; i++) {
