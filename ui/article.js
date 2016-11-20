@@ -120,16 +120,16 @@ function loadCommentForm(username){
 
 function loadComments () {
        
-     alert("inside load comments");
+     
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
             var comments = document.getElementById('comments');
             if (request.status === 200) {
-                alert("response received from the server");
+                
                 var content = '';
                 var commentsData = JSON.parse(request.responseText);
-                alert(commentsData[0].comment);
+                
                for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);
                     content += `<div class="comment">
@@ -156,7 +156,7 @@ function loadComments () {
 
 function submitComment() {
         // Create a request object
-        alert("Inside submit comment");
+        
         var request = new XMLHttpRequest();
         
         // Capture the response and store it in a variable
