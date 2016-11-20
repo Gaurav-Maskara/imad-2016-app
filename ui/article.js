@@ -138,10 +138,11 @@ function loadComments () {
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
                         </div>
                     </div>`;
-                    alert(content);
                 }
                  
-                 document.getElementById('comments').innerHTML = content;
+              //   document.getElementById('comments').innerHTML = content;
+              comments=content;
+              
                  
             } else {
                 comments.innerHTML='Oops! Could not load comments!';
