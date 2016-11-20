@@ -130,7 +130,7 @@ function loadComments () {
                 var content = '';
                 var commentsData = JSON.parse(request.responseText);
                 alert(commentsData[0].comment);
-                for (var i=0; i< commentsData.length; i++) {
+              /*  for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);
                     content += `<div class="comment">
                         <p>${escapeHTML(commentsData[i].comment)}</p>
@@ -139,7 +139,13 @@ function loadComments () {
                         </div>
                     </div>`;
                     alert(content);
-                }
+                }*/
+                 content += `<div class="comment">
+                        <p>${escapeHTML(commentsData[0].comment)}</p>
+                        <div class="commenter">
+                            ${commentsData[0].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
+                        </div>
+                    </div>`;
                 
                 comments.innerHTML = content;
             } else {
