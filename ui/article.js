@@ -140,8 +140,8 @@ function loadComments () {
                     </div>`;
                 }
                  
-              //   document.getElementById('comments').innerHTML = content;
-              comments=content;
+                document.getElementById('comments').innerHTML = content;
+              
               
                  
             } else {
