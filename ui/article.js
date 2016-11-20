@@ -140,14 +140,16 @@ function loadComments () {
                     </div>`;
                     alert(content);
                 }*/
-                 content += `<div class="comment">
-                        <p>${commentsData[0].comment}</p>
-                        <div class="commenter">
-                            ${commentsData[0].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
-                        </div>
-                    </div>`;
-                
-                comments.innerHTML = content;
+                 
+                 document.getElementById('comments').innerHTML = `
+           <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown"><b>HI, ${username}</b><span class="caret"></span></a>
+                <ul class="dropdown-menu">
+		        <li><a href="/logout">Logout</a></li>
+               </ul>
+           </li>
+    `;
+                 
             } else {
                 comments.innerHTML='Oops! Could not load comments!';
             }
