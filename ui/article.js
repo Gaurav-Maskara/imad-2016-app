@@ -87,7 +87,7 @@
 
 
 function checkLogin(){
-    alert("inside check login");
+    
     var request = new XMLHttpRequest();
     request.onreadystatechange = function () {
         if (request.readyState === XMLHttpRequest.DONE) {
