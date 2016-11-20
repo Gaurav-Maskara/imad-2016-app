@@ -130,25 +130,18 @@ function loadComments () {
                 var content = '';
                 var commentsData = JSON.parse(request.responseText);
                 alert(commentsData[0].comment);
-              /*  for (var i=0; i< commentsData.length; i++) {
+               for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);
                     content += `<div class="comment">
-                        <p>${escapeHTML(commentsData[i].comment)}</p>
+                        <p>${commentsData[i].comment}</p>
                         <div class="commenter">
                             ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()} 
                         </div>
                     </div>`;
                     alert(content);
-                }*/
+                }
                  
-                 document.getElementById('comments').innerHTML = `
-           <li class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown"><b>HI, ${username}</b><span class="caret"></span></a>
-                <ul class="dropdown-menu">
-		        <li><a href="/logout">Logout</a></li>
-               </ul>
-           </li>
-    `;
+                 document.getElementById('comments').innerHTML = content;
                  
             } else {
                 comments.innerHTML='Oops! Could not load comments!';
