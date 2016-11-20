@@ -128,7 +128,7 @@ function loadComments () {
             if (request.status === 200) {
                 alert("response received from the server");
                 var content = '';
-                var commentsData = JSON.parse(this.responseText);
+                var commentsData = JSON.parse(request.responseText);
                 for (var i=0; i< commentsData.length; i++) {
                     var time = new Date(commentsData[i].timestamp);
                     content += `<div class="comment">
