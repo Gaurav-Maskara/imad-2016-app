@@ -201,7 +201,7 @@ function registerFunction(){
    
     if(username===''||password===''){
         $("#myModal").modal();
-       //alert('Username/password cannot be empty');
+        //alert('Username/password cannot be empty');
        return;
       
  	}
