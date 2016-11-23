@@ -158,7 +158,7 @@ var login = document.getElementById('login_btn');
 	var username = document.getElementById('username').value;
 	var password = document.getElementById('password').value;
 	
-    if(username==''||password==''){
+    if(username===''||password===''){
 +        alert('Username/password cannot be empty');
 +       return;
 +  	}
