@@ -200,7 +200,10 @@ function registerFunction(){
     var password = document.getElementById('password').value;
    
     if(username===''||password===''){
-        $("#myModal").modal();
+       
+       document.getElementById('username').innerHtml="Required";
+       
+       // $("#myModal").modal();
         //alert('Username/password cannot be empty');
        return;
       
