@@ -155,6 +155,11 @@ var login = document.getElementById('login_btn');
 	// Make the request
 	var username = document.getElementById('username').value;
 	var password = document.getElementById('password').value;
+	
+	if(username=''||password=''){
+       alert('Username/password cannot be empty')
+       return;
+	}
 	console.log(username);
 	console.log(password);
 	request.open('POST', '/login', true);
@@ -189,6 +194,12 @@ function registerFunction(){
     var password = document.getElementById('password').value;
     console.log(username);
     console.log(password);
+   
+    if(username=''||password=''){
+       alert('Username/password cannot be empty')
+       return;
+	}
+    
     request.open('POST', '/create-user', true);
     request.setRequestHeader('Content-Type', 'application/json');
     request.send(JSON.stringify({username: username, password: password}));  
