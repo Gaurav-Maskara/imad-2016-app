@@ -127,10 +127,7 @@ var login = document.getElementById('login_btn');
  function loginFunction(){
 	// Create a request object
     
-    if(username==''||password==''){
-+       alert('Username/password cannot be empty');
-+       return;
-+	}
+    
 	
 	var request = new XMLHttpRequest();
 
@@ -161,6 +158,11 @@ var login = document.getElementById('login_btn');
 	var username = document.getElementById('username').value;
 	var password = document.getElementById('password').value;
 	
+    if(username==''||password==''){
++        alert('Username/password cannot be empty');
++       return;
++  	}
+
 
 	console.log(username);
 	console.log(password);
