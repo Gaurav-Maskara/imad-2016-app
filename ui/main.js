@@ -126,7 +126,11 @@ function save(location){
 var login = document.getElementById('login_btn');
  function loginFunction(){
 	// Create a request object
-
+    
+    if(username==''||password==''){
++       alert('Username/password cannot be empty');
++       return;
++	}
 	
 	var request = new XMLHttpRequest();
 
