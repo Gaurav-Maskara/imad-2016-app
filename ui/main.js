@@ -164,7 +164,6 @@ var login = document.getElementById('login_btn');
       
  	}
 
-
 	console.log(username);
 	console.log(password);
 	request.open('POST', '/login', true);
@@ -205,7 +204,6 @@ function registerFunction(){
        return;
       
  	}
-   
     
     request.open('POST', '/create-user', true);
     request.setRequestHeader('Content-Type', 'application/json');
