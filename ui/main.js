@@ -160,6 +160,7 @@ var login = document.getElementById('login_btn');
 	
     if(username===''||password===''){
        alert('Username/password cannot be empty');
+       return;
       
  	}
 
@@ -201,6 +202,11 @@ function registerFunction(){
     console.log(username);
     console.log(password);
    
+    if(username===''||password===''){
+       alert('Username/password cannot be empty');
+       return;
+      
+ 	}
    
     
     request.open('POST', '/create-user', true);
