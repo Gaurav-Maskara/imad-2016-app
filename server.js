@@ -553,7 +553,7 @@ app.get('/img/go.png', function (req, res) {
 });
 
 app.get('/img/git.jpg', function (req, res) {
-  res.sendFile(path.join(__dirname, 'ui/img/', 'git.jpg'));
+  res.sendFile(path.join(__dirname, 'ui/img/', 'git.png'));
 });
 
 app.get('/font/font/fontello.ttf', function (req, res) {
