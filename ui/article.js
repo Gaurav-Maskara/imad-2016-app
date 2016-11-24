@@ -175,6 +175,12 @@ function submitComment() {
         
         // Make the request
         var comment = document.getElementById('textBox').value;
+        
+         if(comment===''){
+            alert('Please enter your comments to submit');
+            return;
+ 	    }
+        
         request.open('POST', '/submit-comment/' + currentArticleTitle, true);
         request.setRequestHeader('Content-Type', 'application/json');
         request.send(JSON.stringify({comment: comment}));  
