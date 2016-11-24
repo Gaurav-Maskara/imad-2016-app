@@ -6,6 +6,7 @@ var crypto=require('crypto');
 var bodyParser=require('body-parser');
 var session = require('express-session');
 
+/*setting the configuration for the database connectivity*/
 var config = {
     user: 'gaurav-maskara',
     database: 'gaurav-maskara',
@@ -14,6 +15,7 @@ var config = {
     password: process.env.DB_PASSWORD
 };
 
+/*using various library for  the express framework*/
 var app = express();
 app.use(morgan('combined'));
 app.use(bodyParser.json());
@@ -21,6 +23,8 @@ app.use(session({
     secret: 'someRandomSecretValue',
     cookie: { maxAge: 1000 * 60 * 60 * 24 * 30}
 }));
+
+
 
 /*var articles={
 
@@ -30,7 +34,7 @@ app.use(session({
     date:'26 September',
      content:`<p>This is the content for my second article. </p>`,
 },
- 'article-two':{
+ 'article-two':{                                                         
     title:'Article Two| Gaurav Maskara',
     heading:'Article Two',
     date:'18 September',
@@ -44,6 +48,7 @@ app.use(session({
 }
 };*/
 
+/*creating templates for the articles pages */
 function createTemplate(data){
 
 var title=data.title;
@@ -192,6 +197,7 @@ app.get('/', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui', 'index.html'));
 });
 
+/*hash function to encrypt the password before storing it into the databse*/
 function hash (input, salt) {
     // how do we create a hash
     var hashed = crypto.pbkdf2Sync(input, salt, 10000, 512, 'sha512');
@@ -204,6 +210,7 @@ app.get('/hash/:input',function(req,res){
    res.send(hashedString);
 });
 
+/* create user endpoint*/
 app.post('/create-user', function (req, res) {
    // username, password
    // {"username": "Gaurav", "password": "password"}
@@ -223,7 +230,7 @@ app.post('/create-user', function (req, res) {
    });
 });
 
-
+/*login endpoint*/
 app.post('/login', function (req, res) {
    var username = req.body.username;
    var password = req.body.password;
@@ -257,7 +264,7 @@ app.post('/login', function (req, res) {
    });
 });
 
-
+ /*verifying whether a user is logged on or not before displaying a page*/
 app.get('/check-login', function (req, res) {
    if (req.session && req.session.auth && req.session.auth.userId) {
       
@@ -362,7 +369,7 @@ app.get("/submit-comment",function(req ,res){
 });*/
 
 
-app.get("/comments",function(req ,res){ 
+/*app.get("/comments",function(req ,res){ 
 	    pool.query("SELECT * FROM comment ",function(err,result){
            if(err){
                res.status(500).send(err.toString()); 
@@ -380,8 +387,9 @@ app.get("/comments",function(req ,res){
             }
         }
     });
-});
+});*/
   
+  /*feedback submit endpoint*/
 app.get("/feedback",function(req ,res){ 
 
 	var name=req.query.name;
@@ -401,6 +409,7 @@ app.get("/feedback",function(req ,res){
   
 });
 
+/* endpoint to save client details when he opens the website for analytics purpose*/
 app.get("/client/details",function(req ,res){ 
 
 	var ip=req.query.ip;
