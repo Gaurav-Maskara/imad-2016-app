@@ -19,7 +19,7 @@
      request.send(null);
  };*/
 
-//Submit name
+//Submit name by the user
 var submit =document.getElementById("submit_btn");
 submit.onclick=function(){
 	//Create a request object 
@@ -49,6 +49,7 @@ submit.onclick=function(){
 	request.send(null);
 };
 
+/* submitting the feedback given by the client*/
 function feedback(){
 	document.getElementById("close").click();
 	var request=new XMLHttpRequest();
@@ -98,7 +99,7 @@ function feedback(){
         }); 
 };*/
 
-
+ /*saving the client details when he open the website for analytics purpose*/
 function save(location){
 	//  alert(ip+city);
 	var request=new XMLHttpRequest();
