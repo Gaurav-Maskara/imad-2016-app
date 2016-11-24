@@ -205,6 +205,15 @@ function hash (input, salt) {
     
 }
 
+function escapeHtml(unsafe) {
+    return unsafe
+         .replace(/&/g, "&amp;")
+         .replace(/</g, "&lt;")
+         .replace(/>/g, "&gt;")
+         .replace(/"/g, "&quot;")
+         .replace(/'/g, "&#039;");
+}
+
 app.get('/hash/:input',function(req,res){
     var hashedString=hash(req.params.input, 'this-is-some-random-string');
    res.send(hashedString);
@@ -216,7 +225,7 @@ app.post('/create-user', function (req, res) {
    // {"username": "Gaurav", "password": "password"}
    // JSON
   
-   var username = req.body.username;
+   var username = escapeHtml(req.body.username);
    var password = req.body.password;
    var salt = crypto.randomBytes(128).toString('hex');
    var dbString = hash(password, salt);
@@ -392,10 +401,10 @@ app.get("/submit-comment",function(req ,res){
   /*feedback submit endpoint*/
 app.get("/feedback",function(req ,res){ 
 
-	var name=req.query.name;
-	var email=req.query.email;
-	var website=req.query.website;
-	var text=req.query.text;
+	var name=escapeHtml(req.query.name);
+	var email=escapeHtml(req.query.email);
+	var website=escapeHtml(req.query.website);
+	var text=escapeHtml(req.query.text);
     
    
     pool.query("insert into feedback (name,email,website,text) values ($1,$2,$3,$4)",[name,email,website,text],function(err,result){
