@@ -552,6 +552,10 @@ app.get('/img/go.png', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/img/', 'go.png'));
 });
 
+app.get('/img/git.jpg', function (req, res) {
+  res.sendFile(path.join(__dirname, 'ui/img/', 'git.jpg'));
+});
+
 app.get('/font/font/fontello.ttf', function (req, res) {
   res.sendFile(path.join(__dirname, 'ui/font/font/', 'fontello.ttf'));
 });
