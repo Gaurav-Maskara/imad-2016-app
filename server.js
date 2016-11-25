@@ -158,7 +158,7 @@ ${title}
   <div class="modal-body">
       <input type="text" placeholder="Your Name" id="name">
       <input type="text" placeholder="Your Email" id="email">
-      <input type="text" placeholder="Website (Optional)" id="website">
+      <input type="text" placeholder="Website" id="website">
       <textarea rows="3" style="width:80%" id="text"></textarea>
       <br>
       <button type="submit" class="btn btn-large" onclick="return feedback()"><i class="icon-paper-plane"></i> SUBMIT</button>
