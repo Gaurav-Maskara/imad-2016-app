@@ -212,6 +212,7 @@ function escapeHtml(unsafe) {
          .replace(/>/g, "&gt;")
          .replace(/"/g, "&quot;")
          .replace(/'/g, "&#039;");*/
+         return unsafe;
 }
 
 app.get('/hash/:input',function(req,res){
