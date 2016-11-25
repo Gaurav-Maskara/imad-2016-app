@@ -402,10 +402,10 @@ app.get("/submit-comment",function(req ,res){
   /*feedback submit endpoint*/
 app.get("/feedback",function(req ,res){ 
 
-	var name=escapeHtml(req.query.name);
-	var email=escapeHtml(req.query.email);
-	var website=escapeHtml(req.query.website);
-	var text=escapeHtml(req.query.text);
+	var name=req.query.name;
+	var email=req.query.email;
+	var website=req.query.website;
+	var text=req.query.text;
     
    
     pool.query("insert into feedback (name,email,website,text) values ($1,$2,$3,$4)",[name,email,website,text],function(err,result){
