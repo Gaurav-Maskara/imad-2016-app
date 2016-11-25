@@ -205,7 +205,7 @@ function hash (input, salt) {
     
 }
 
-/*function escapeHtml(unsafe) {
+function escapeHtml(unsafe) {
     return unsafe
          .replace(/&/g, "&amp;")
          .replace(/</g, "&lt;")
@@ -213,7 +213,7 @@ function hash (input, salt) {
          .replace(/"/g, "&quot;")
          .replace(/'/g, "&#039;");
         
-}*/
+}
 
 app.get('/hash/:input',function(req,res){
     var hashedString=hash(req.params.input, 'this-is-some-random-string');
@@ -226,8 +226,7 @@ app.post('/create-user', function (req, res) {
    // {"username": "Gaurav", "password": "password"}
    // JSON
   
-  // var username = escapeHtml(req.body.username);
-   var username = req.body.username;
+   var username = escapeHtml(req.body.username);
    var password = req.body.password;
    var salt = crypto.randomBytes(128).toString('hex');
    var dbString = hash(password, salt);
