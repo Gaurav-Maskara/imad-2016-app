@@ -135,7 +135,7 @@ function loadComments () {
                     content += `<div class="comment">
                         <p><b>${commentsData[i].comment}</b></p>
                         <div class="commenter">
-                           <i><small> ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()}</small> </i>
+                           <i> - <small> ${commentsData[i].username} - ${time.toLocaleTimeString()} on ${time.toLocaleDateString()}</small> </i>
                         </div>
                     </div>`;
                 }
